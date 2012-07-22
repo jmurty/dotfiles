@@ -1,0 +1,50 @@
+####################
+# Bash Configuration
+####################
+
+# History
+export HISTCONTROL=ignoredups
+export HISTSIZE=10000
+shopt -s histappend
+
+export EDITOR=vim
+
+# Set Terminal window titles
+export PS1="\[\033]0;\u@\h:\w\007\]\h:\w \u\$ "
+
+# Colours
+export LSCOLORS="ExgxdxDxcxegedabagacad"
+
+# TERM (256 colours)
+[ -z "$TMUX" ] && export TERM=xterm-256color
+
+export LC_CTYPE=en_US.UTF-8
+export ARCHFLAGS="-arch x86_64"
+
+# Command completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
+
+#########
+# Aliases
+#########
+
+alias ls="ls -G"
+
+# scp resume - http://panela.blog-city.com/resume_scp_after_interrupted_downloads_use_rsync.htm
+alias scpresume="rsync --partial --progress --rsh=ssh"
+
+# git command for working with home directory's dotfiles repo
+alias hgit='git --work-tree=$HOME --git-dir=$HOME/dotfiles.git'
+
+
+#######
+# Tools
+#######
+
+# Autojump (via brew) - https://github.com/joelthelion/autojump
+if [ -f `brew --prefix`/etc/autojump ]; then
+  . `brew --prefix`/etc/autojump
+fi

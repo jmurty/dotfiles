@@ -1,0 +1,32 @@
+startup_message off
+
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I"
+# tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm-256color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+#termcapinfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+# erase background with current bg color
+defbce "on"
+
+# Display $USER and screen titles in a neat way :P
+#caption always "%{=b dy}{ %{= dm}${USER} %{=b dy}}%={ %?%{= dc}%-Lw%?%{+b dy}(%{-b r}%n:%t%{+b dy})%?(%u)%?%{-dc}%?%{= dc}%+Lw%? %{=b dy}}"
+
+# Draw status bar on bottom of terminal
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{= dY}%-Lw%{= dr}%n %t%{= dY}%+Lw %=%{= dG} ${USER}@%H %{= dY} %Y-%m-%d %c "
+
+# C-x for prefix
+#escape ^Xx
+
+shell -${SHELL}
+
+term "screen-256color"
+
+# Let me scroll back ten thousand lines or so.
+defscrollback 10240
+
+# Minimize lag in vim
+maptimeout 0
+defc1 off

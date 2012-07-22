@@ -1,0 +1,77 @@
+# This is a Mercurial configuration file.
+[ui]
+username=James Murty <james@murty.co>
+
+ssh = ssh -C
+
+ignore=~/.hgignore-global
+
+# Disable annoying graphical merge tools
+#merge = internal:merge
+
+# Three-way merge with vimdiff (shows result in bottom window)
+# Based on http://mercurial.selenic.com/wiki/MergingWithVim
+# and http://www.toofishes.net/blog/three-way-merging-git-using-vim/
+merge = vimdiff
+[merge-tools]
+vimdiff.executable = vim
+vimdiff.args = -f -d -c "wincmd J" "$output" "$local" "$other" "$base"
+
+[extensions]
+# http://mercurial.selenic.com/wiki/PagerExtension
+pager =
+hgext.convert =
+
+# Get rid of annoying "failed to import extension hgext/hct" errors:
+hgext/hct=!
+
+# enable glog command: http://mercurial.selenic.com/wiki/GraphlogExtension
+hgext.graphlog=
+
+# enable fetch command: http://mercurial.selenic.com/wiki/FetchExtension
+hgext.fetch=
+
+# http://mercurial.selenic.com/wiki/TransplantExtension
+transplant=
+
+# colorized diffs
+hgext.color=
+
+# MqExtension: http://mercurial.selenic.com/wiki/MqExtension
+hgext.mq =
+
+# HgRecord: http://mercurial.selenic.com/wiki/RecordExtension
+hgext.record =
+
+# HgShelve: http://mercurial.selenic.com/wiki/ShelveExtension
+hgshelve = ~/Documents/shell/hgexts/hgshelve/hgshelve.py
+
+# Histedit: http://mercurial.selenic.com/wiki/HisteditExtension
+histedit = ~/Documents/shell/hgexts/histedit/hg_histedit.py
+
+# Rebase: http://mercurial.selenic.com/wiki/RebaseExtension
+rebase =
+
+# LocalBranch: https://bitbucket.org/jmurty/mercurial-extensions-localbranch
+localbranch = ~/Documents/shell/hgexts/jmurty-localbranch/localbranch.py
+
+# Enable bookmarks support, with current tracking enabled. See:
+#  http://mercurial.selenic.com/wiki/BookmarksExtension
+#  http://x.zpuppet.org/2009/02/27/mercurial-bookmarks/
+#  lazymalloc.blogspot.com/2009/03/uses-of-mercurials-bookmarks-extension.html
+hgext.bookmarks =
+
+# NOTE: track.current setting requires Mercurial 1.2+
+[bookmarks]
+track.current = True
+
+[pager]
+pager = LESS='FSRX' less
+
+[color]
+qseries.unapplied = black bold white_background
+
+[web]
+# Quiet HTTPS certificate warnings, see
+# http://mercurial.selenic.com/wiki/CACertificates#Mac_OS_X_10.6_and_higher
+cacerts = ~/.hg-dummycert.pem
