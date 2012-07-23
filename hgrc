@@ -43,23 +43,23 @@ hgext.mq =
 # HgRecord: http://mercurial.selenic.com/wiki/RecordExtension
 hgext.record =
 
-# HgShelve: http://mercurial.selenic.com/wiki/ShelveExtension
-hgshelve = ~/Documents/shell/hgexts/hgshelve/hgshelve.py
-
-# Histedit: http://mercurial.selenic.com/wiki/HisteditExtension
-histedit = ~/Documents/shell/hgexts/histedit/hg_histedit.py
-
 # Rebase: http://mercurial.selenic.com/wiki/RebaseExtension
 rebase =
-
-# LocalBranch: https://bitbucket.org/jmurty/mercurial-extensions-localbranch
-localbranch = ~/Documents/shell/hgexts/jmurty-localbranch/localbranch.py
 
 # Enable bookmarks support, with current tracking enabled. See:
 #  http://mercurial.selenic.com/wiki/BookmarksExtension
 #  http://x.zpuppet.org/2009/02/27/mercurial-bookmarks/
 #  lazymalloc.blogspot.com/2009/03/uses-of-mercurials-bookmarks-extension.html
 hgext.bookmarks =
+
+# HgShelve: http://mercurial.selenic.com/wiki/ShelveExtension
+hgshelve = ~/hgexts/hgshelve/hgshelve.py
+
+# Histedit: http://mercurial.selenic.com/wiki/HisteditExtension
+histedit = ~/hgexts/histedit/hg_histedit.py
+
+# LocalBranch: https://bitbucket.org/brendan/mercurial-extensions-localbranch/
+localbranch = ~/hgexts/mercurial-extensions-localbranch/localbranch.py
 
 # NOTE: track.current setting requires Mercurial 1.2+
 [bookmarks]
