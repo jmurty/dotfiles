@@ -1,2 +1,3 @@
 --pager=less -R
 --type-add=php=.inc
+--ignore-dir=migrations

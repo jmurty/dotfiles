@@ -2,6 +2,11 @@
 # Bash Configuration
 ####################
 
+# Enable colors in the console
+export CLICOLOR=1
+# Define colors for listings
+export LSCOLORS=Exfxcxdxbxegedabagacad
+
 # History
 export HISTCONTROL=ignoredups
 export HISTSIZE=10000
@@ -48,3 +53,12 @@ alias hgit='git --work-tree=$HOME --git-dir=$HOME/dotfiles.git'
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
+
+# Pip config
+export PIP_RESPECT_VIRTUALENV=true
+export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache
+if [ ! -d $PIP_DOWNLOAD_CACHE ]
+then
+    mkdir $PIP_DOWNLOAD_CACHE
+fi
+

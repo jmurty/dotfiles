@@ -207,9 +207,9 @@ endif
 set mouse=
 
 " Use OS X clipboard as yank buffer (7.3+)
-if has("mac")
-  set clipboard=unnamed
-endif
+"if has("mac")
+"  set clipboard=unnamed
+"endif
 
 " Syntastic syntax checking
 let g:syntastic_enable_signs=0
