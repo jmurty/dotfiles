@@ -230,3 +230,6 @@ endif
 " Show git branch in status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+" ixc whitespace styles: tabs with width 2 for html, otherwise spaces width 4
+autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2 noet
+autocmd Filetype html setlocal ts=2 sts=2 sw=2 noet
