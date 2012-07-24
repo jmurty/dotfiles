@@ -3,3 +3,5 @@
 tags
 # Vim temp files
 *.swp
+# Python bytecode files
+*.pyc
