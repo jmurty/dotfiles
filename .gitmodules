@@ -46,9 +46,6 @@
 [submodule "vim/bundle/taglist.vim"]
 	path = vim/bundle/taglist.vim
 	url = git://github.com/vim-scripts/taglist.vim.git
-[submodule "vim/bundle/numbers.vim"]
-	path = vim/bundle/numbers.vim
-	url = git://github.com/myusuf3/numbers.vim.git
 [submodule "vim/bundle/vim-bad-whitespace"]
 	path = vim/bundle/vim-bad-whitespace
 	url = git://github.com/bitc/vim-bad-whitespace.git
