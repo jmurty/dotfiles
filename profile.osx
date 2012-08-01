@@ -44,8 +44,6 @@ alias ls="ls -G"
 # scp resume - http://panela.blog-city.com/resume_scp_after_interrupted_downloads_use_rsync.htm
 alias scpresume="rsync --partial --progress --rsh=ssh"
 
-# git command for working with home directory's dotfiles repo
-alias hgit='git --work-tree=$HOME --git-dir=$HOME/dotfiles.git'
 
 
 #######
@@ -65,3 +63,9 @@ then
     mkdir $PIP_DOWNLOAD_CACHE
 fi
 
+#############
+# Virtualenvs
+#############
+
+export WORKON_HOME=~/Documents/code/virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
