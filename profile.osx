@@ -44,6 +44,9 @@ alias ls="ls -G"
 # scp resume - http://panela.blog-city.com/resume_scp_after_interrupted_downloads_use_rsync.htm
 alias scpresume="rsync --partial --progress --rsh=ssh"
 
+# Start/stop PostgreSQL
+alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 
 #######
