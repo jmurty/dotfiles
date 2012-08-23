@@ -2,3 +2,4 @@
 --type-add=php=.inc
 --type-add=css=.scss
 --ignore-dir=migrations
+--ignore-dir=CACHE
