@@ -73,3 +73,6 @@
 [submodule "vim/bundle/gundo.vim"]
 	path = vim/bundle/gundo.vim
 	url = http://github.com/sjl/gundo.vim.git
+[submodule "vim/bundle/taskpaper.vim"]
+	path = vim/bundle/taskpaper.vim
+	url = git://github.com/davidoc/taskpaper.vim.git
