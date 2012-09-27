@@ -1,0 +1,12 @@
+To include or re-include Git template content into your repository do one of:
+
+- Set the "init.templatedir" to the git_template directory path, e.g.
+  git config --global init.templatedir '~/.git_template'
+
+  You only need to do this once.
+
+  Run `git init` on any existing repositories to apply the template content,
+  future repos will automatically include it.
+
+- Include the "--template" option pointing to the git_template directory path
+  when you run git clone or init.

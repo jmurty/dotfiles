@@ -1,0 +1,39 @@
+#!/bin/sh
+
+ERR_CODE=0
+
+# Do not stash unless we have at least an initial commit
+if git rev-parse --verify HEAD >/dev/null 2>&1
+then
+    against=HEAD
+    DO_STASH=1
+else
+    # Initial commit: diff against an empty tree object
+    against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+fi
+
+# Stash working directory files out of the way during checks
+if [ ${DO_STASH:+x} ]
+then
+    git stash -q --keep-index
+fi
+
+
+############################################################################
+# Prevent commit of common dev debugging/logging items
+############################################################################
+
+# Pyton: pdb.set_trace()
+CATCH='pdb.set_trace'
+git diff --cached --name-only | \
+    grep -E '\.py' | \
+    GREP_COLOR='4;5;37;41' xargs grep --color --with-filename -n $CATCH && echo "ERROR: COMMIT REJECTED Found '$CATCH' in staged file(s)" && ERR_CODE=1
+
+
+# Unstash working directory files after checks
+if [ ${DO_STASH:+x} ]
+then
+    git stash -q --keep-index
+fi
+
+exit $ERR_CODE
