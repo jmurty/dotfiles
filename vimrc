@@ -43,6 +43,9 @@ set showmode
 set number
 set wildmenu
 
+" Status Line base
+set statusline=%<%f%h%m%r\ %P\ 
+
 " Formatting/wrapping options, see :help fo-table
 set nowrap linebreak
 set formatoptions=qrn1
@@ -221,6 +224,10 @@ let g:syntastic_quiet_warnings=0
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'passive_filetypes': [],
                            \ 'active_filetypes': [] }
+" Show syntastic warning in status line
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 " vim-fugitive Git wrapper
 if has("autocmd")
@@ -228,5 +235,5 @@ if has("autocmd")
     autocmd BufReadPost fugitive://* set bufhidden=delete
 endif
 " Show git branch in status line
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+"set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
