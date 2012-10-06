@@ -26,7 +26,7 @@ imap <Leader>F <Esc>:NERDTreeFind<CR>
 let NERDTreeIgnore=['\~$', '\.pyc$']
 
 " Ignore files in general
-set wildignore+=*.pyc,*.o,*.obj,*.class,*.png,*.jpg,*.gif
+set wildignore+=*/build/*,*.pyc,*.o,*.obj,*.class,*.png,*.jpg,*.gif
 
 " BufExplorer
 nmap <F3> :BufExplorer<CR>
