@@ -16,8 +16,9 @@
 [status]
   submodule = 1
 [push]
-  # Only push branches that have been set up to track a remote branch.
-  default = current
+  # Only push branches that have been set up to track a remote branch,
+  # and push them directly to the upstream tracked branch.
+  default = upstream
 [apply]
   whitespace = warn
 [alias]
@@ -35,4 +36,4 @@
   # Usage: git track origin/feature-123-login-form
   track = checkout -t
 [init]
-	templatedir = ~/.git_template
+  templatedir = ~/.git_template
