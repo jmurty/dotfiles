@@ -43,12 +43,13 @@ set showmode
 set number
 set wildmenu
 
-" Status Line base
-set statusline=%<%f%h%m%r\ %P\ 
+" Ruler/Status Line base
+set rulerformat=%30(%<%=%h%m%r%y\ (%l/%L,%c%V)\ %P%)
+set statusline=%<%f\ %h%m%r%=%y\ (%l/%L,%c%V)\ %P
 
 " Formatting/wrapping options, see :help fo-table
 set nowrap linebreak
-set formatoptions=qrn1
+set formatoptions=qrn1tc
 
 " jj == Escape
 imap jj <Esc>
@@ -116,8 +117,15 @@ nmap <silent> <Leader>l :set list!<CR>
 " Highlight max-width column (7.3+)
 set colorcolumn=80
 
+" Set text width for auto-wrapping (need 'tc' in formatoptions, see ,w/,W)
+set textwidth=79
+
+" Toggle automatic line-wrapping on and off
+nmap <Leader>w :set formatoptions+=tc<CR>
+nmap <Leader>W :set formatoptions-=tc<CR>
+
 " Excess whitespace find with \ws
-nmap <Leader>ws /\s\+$\\|\t<CR>
+"nmap <Leader>ws /\s\+$\\|\t<CR>
 
 " Highlight current line
 "set cursorline
