@@ -35,7 +35,7 @@ fi
 PATH=$HOME/local/bin:/usr/local/bin:$PATH
 
 # Include python installs in brew location
-PATH=/usr/local/share/python:$PATH
+PATH=/usr/local/share/python:/usr/local/share/python3:$PATH
 
 #########
 # Aliases
