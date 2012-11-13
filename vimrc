@@ -185,6 +185,7 @@ let g:ctrlp_cmd=':CtrlPMixed'
 let g:ctrlp_max_files=30000
 let g:ctrlp_max_height=25
 let g:ctrlp_working_path_mode=0
+let g:ctrlp_mruf_relative=1
 
 " Toggle mouse mode between a and nothing (work around PuTTY copy/paste weirdness)
 nnoremap <silent> <Leader>m :set mouse=a<CR>
