@@ -1,5 +1,8 @@
 --pager=less -R
 --type-add=php=.inc
 --type-add=css=.scss
+--type-set=plaintext=.md,.markdown,.textile,.rst,.txt
 --ignore-dir=migrations
+--ignore-dir=build
+--ignore-dir=.tox
 --ignore-dir=CACHE

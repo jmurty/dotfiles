@@ -26,7 +26,7 @@ imap <Leader>F <Esc>:NERDTreeFind<CR>
 let NERDTreeIgnore=['\~$', '\.pyc$']
 
 " Ignore files in general
-set wildignore+=*.pyc,*.o,*.obj,*.class,*.png,*.jpg,*.gif
+set wildignore+=*/build/*,*.pyc,*.o,*.obj,*.class,*.png,*.jpg,*.gif
 
 " BufExplorer
 nmap <F3> :BufExplorer<CR>
@@ -48,7 +48,7 @@ set statusline=%<%f%h%m%r\ %P\
 
 " Formatting/wrapping options, see :help fo-table
 set nowrap linebreak
-set formatoptions=qrn1
+set formatoptions=qrn1tc
 
 " jj == Escape
 imap jj <Esc>
@@ -116,8 +116,15 @@ nmap <silent> <Leader>l :set list!<CR>
 " Highlight max-width column (7.3+)
 set colorcolumn=80
 
+" Set text width for auto-wrapping (need 'tc' in formatoptions, see ,w/,W)
+set textwidth=79
+
+" Toggle automatic line-wrapping on and off
+nmap <Leader>w :set formatoptions+=tc<CR>
+nmap <Leader>W :set formatoptions-=tc<CR>
+
 " Excess whitespace find with \ws
-nmap <Leader>ws /\s\+$\\|\t<CR>
+"nmap <Leader>ws /\s\+$\\|\t<CR>
 
 " Highlight current line
 "set cursorline
@@ -237,6 +244,12 @@ if has("autocmd")
 endif
 " Show git branch in status line
 "set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" jedi-vim config
+let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#autocompletion_command = "<C-Space>"
+"" Don't auto-complete unless I ask for it with Ctrl-Space
+let g:jedi#popup_on_dot = 0
 
 " ixc whitespace styles: tabs with width 2 for html, otherwise spaces width 4
 autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2 noet
