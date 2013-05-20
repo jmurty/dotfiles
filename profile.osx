@@ -64,14 +64,9 @@ then
     mkdir $PIP_DOWNLOAD_CACHE
 fi
 
-#####
-# IXC
-#####
+#############
+# Virtualenvs
+#############
 
-# Venvwrapper functions
-export WORKON_HOME=$HOME/Sites/virtualenvs
-export PROJECT_HOME=$HOME/Sites
+export WORKON_HOME=~/Documents/code/virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
-
-# Django command completion
-source ~/Sites/django/django-git/extras/django_bash_completion
