@@ -48,7 +48,7 @@ set statusline=%<%f%h%m%r\ %P\
 
 " Formatting/wrapping options, see :help fo-table
 set nowrap linebreak
-set formatoptions=qrn1tc
+set formatoptions=qrn1ltc
 
 " jj == Escape
 imap jj <Esc>
@@ -120,10 +120,10 @@ set colorcolumn=80
 set textwidth=79
 
 " Toggle automatic line-wrapping on and off
-nmap <Leader>w :set formatoptions+=tc<CR>
-nmap <Leader>W :set formatoptions-=tc<CR>
+nmap <Leader>wr :set formatoptions+=tc<CR>
+nmap <Leader>WR :set formatoptions-=tc<CR>
 
-" Excess whitespace find with \ws
+" Excess whitespace find with ,ws
 "nmap <Leader>ws /\s\+$\\|\t<CR>
 
 " Highlight current line
