@@ -246,3 +246,8 @@ endif
 " Show git branch in status line
 "set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+" jedi-vim config
+let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#autocompletion_command = "<C-Space>"
+"" Don't auto-complete unless I ask for it with Ctrl-Space
+let g:jedi#popup_on_dot = 0
