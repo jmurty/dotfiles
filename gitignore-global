@@ -6,3 +6,5 @@ tags
 *.swo
 # Python bytecode files
 *.pyc
+# Vagrant local VMs
+.vagrant
