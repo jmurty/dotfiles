@@ -1,9 +1,12 @@
 *~
+# OSX detritus
 .DS_Store
+# ctags
 tags
-# Vim temp files
+# Vim temporary and binary files
 *.swp
 *.swo
+.netrwhist
 # Python bytecode files
 *.pyc
 # Vagrant local VMs
