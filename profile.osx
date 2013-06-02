@@ -4,8 +4,6 @@
 
 # Enable colors in the console
 export CLICOLOR=1
-# Define colors for listings
-export LSCOLORS=Exfxcxdxbxegedabagacad
 
 # History
 export HISTCONTROL=ignoredups
@@ -17,7 +15,7 @@ export EDITOR=vim
 # Set Terminal window titles
 export PS1="\[\033]0;\u@\h:\w\007\]\h:\w \u\$ "
 
-# Colours
+# Define colors for listings
 export LSCOLORS="ExgxdxDxcxegedabagacad"
 
 # TERM (256 colours)
@@ -52,9 +50,7 @@ alias scpresume="rsync --partial --progress --rsh=ssh"
 #######
 
 # Autojump (via brew) - https://github.com/joelthelion/autojump
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
-fi
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # Pip config
 export PIP_RESPECT_VIRTUALENV=true
