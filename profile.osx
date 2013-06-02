@@ -66,3 +66,11 @@ fi
 
 export WORKON_HOME=~/Documents/code/virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
+
+#########
+# Vagrant
+#########
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
