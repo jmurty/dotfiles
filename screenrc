@@ -22,7 +22,7 @@ hardstatus string "%{= dY}%-Lw%{= dr}%n %t%{= dY}%+Lw %=%{= dG} ${USER}@%H %{= d
 
 shell -${SHELL}
 
-term "screen-256color"
+term "xterm-256color"
 
 # Let me scroll back ten thousand lines or so.
 defscrollback 10240
