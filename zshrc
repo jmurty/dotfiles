@@ -1,15 +1,9 @@
-# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="kennethreitz"
+ZSH_CUSTOM=$HOME/.zsh
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Theme to load. Looks in $ZSH_CUSTOM/themes, $ZSH_CUSTOM, $ZSH/themes/
+ZSH_THEME="jmurty"  # Suffix .zsh-theme is assumed
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -40,24 +34,22 @@ ZSH_THEME="kennethreitz"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mercurial history autojump battery brew pip python)
+plugins=(history-substring-search last-working-dir autojump battery brew pip python vagrant virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+# Auto-export new env variables
+setopt allexport
+
 # History
-HISTFILE=~/.histfile
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+# History search key bindings handled by history-substring-search plugin
 
 EDITOR=vim
-
-# Define colors for listings
-LSCOLORS="ExgxdxDxcxegedabagacad"
-
-# TERM (256 colours)
-[ -z "$TMUX" ] && TERM=xterm-256color
 
 # Include local builds in path
 PATH=$HOME/local/bin:/usr/local/bin:$PATH
@@ -69,11 +61,8 @@ PATH=/usr/local/share/python:/usr/local/share/python3:$PATH
 # Aliases
 #########
 
-alias ls="ls -G"
-
 # scp resume - http://panela.blog-city.com/resume_scp_after_interrupted_downloads_use_rsync.htm
 alias scpresume="rsync --partial --progress --rsh=ssh"
-
 
 #######
 # Tools
