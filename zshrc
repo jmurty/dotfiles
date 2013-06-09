@@ -34,7 +34,7 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(history-substring-search last-working-dir autojump battery brew pip python vagrant virtualenv)
+plugins=(history-substring-search autojump battery brew pip python vagrant virtualenv tmux tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -75,6 +75,9 @@ if [ ! -d $PIP_DOWNLOAD_CACHE ]
 then
     mkdir $PIP_DOWNLOAD_CACHE
 fi
+
+# Tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 #############
 # Virtualenvs
