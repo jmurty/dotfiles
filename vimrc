@@ -44,7 +44,7 @@ set number
 set wildmenu
 
 " Status Line base
-set statusline=%<%f%h%m%r\ %P\ 
+set statusline=%<%f%h%m%r\ 
 
 " Formatting/wrapping options, see :help fo-table
 set nowrap linebreak
@@ -164,6 +164,9 @@ vmap <C-Down> ]egv
 " Visually select the text that was last edited/pasted
 nmap gV `[v`]
 
+" Show only relative paths in Buffer Explorer by default
+let g:bufExplorerShowRelativePath=1
+
 " Change command map prefix for VCS plugin from <Leader>c to <Leader>v
 let VCSCommandMapPrefix = "<Leader>v"
 
@@ -236,6 +239,9 @@ let g:syntastic_mode_map = { 'mode': 'active',
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+" Add content to end of status line
+set statusline+=%=%-10.(%l,%c%V%)\ %P
 
 " vim-fugitive Git wrapper
 if has("autocmd")
