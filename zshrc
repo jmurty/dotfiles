@@ -64,6 +64,9 @@ PATH=/usr/local/share/python:/usr/local/share/python3:$PATH
 # scp resume - http://panela.blog-city.com/resume_scp_after_interrupted_downloads_use_rsync.htm
 alias scpresume="rsync --partial --progress --rsh=ssh"
 
+# ag: silver searcher
+alias ag="ag --pager=less"
+
 #######
 # Tools
 #######
