@@ -51,8 +51,8 @@ SAVEHIST=10000
 
 EDITOR=vim
 
-# Include local builds in path
-PATH=$HOME/local/bin:/usr/local/bin:$PATH
+# Include homebrew builds in path
+PATH=/usr/local/bin:$PATH
 
 # Include python installs in brew location
 PATH=/usr/local/share/python:/usr/local/share/python3:$PATH
