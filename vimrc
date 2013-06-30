@@ -180,8 +180,12 @@ if has("autocmd")
     autocmd FileType python set omnifunc=pythoncomplete#Complete
 endif
 
+" YankRing config
 " Show contents of YankRing
 nmap <Leader>y :YRShow<CR>
+" Don't use default C-N / C-P keys for paste cycling, this clobbers Ctrl-P
+let g:yankring_replace_n_pkey = '<m-p>'
+let g:yankring_replace_n_nkey = '<m-n>'
 
 " Undo files (7.3+)
 set undofile
