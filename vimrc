@@ -16,8 +16,6 @@ nmap <silent> <Leader>1 :set t_Co=16<CR>
 nmap <silent> <Leader>2 :set t_Co=256<CR>
 
 " NERDTreeToggle
-nmap <F2> :NERDTreeToggle<CR>
-imap <F2> <Esc>:NERDTreeToggle<CR>
 nmap <Leader>f :NERDTreeToggle<CR>
 imap <Leader>f <Esc>:NERDTreeToggle<CR>
 nmap <Leader>F :NERDTreeFind<CR>
@@ -29,13 +27,7 @@ let NERDTreeIgnore=['\~$', '\.pyc$']
 set wildignore+=*/build/*,*.pyc,*.o,*.obj,*.class,*.png,*.jpg,*.gif
 
 " BufExplorer
-nmap <F3> :BufExplorer<CR>
-imap <F3> <Esc>:BufExplorer<CR>
 nmap <Leader><Space> :BufExplorer<CR>
-
-" SessionList
-nmap <F5> :SessionList<CR>
-imap <F5> <Esc>:SessionList<CR>
 
 " Display
 set ruler
