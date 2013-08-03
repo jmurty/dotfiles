@@ -26,9 +26,6 @@ let NERDTreeIgnore=['\~$', '\.pyc$']
 " Ignore files in general
 set wildignore+=*/build/*,*.pyc,*.o,*.obj,*.class,*.png,*.jpg,*.gif
 
-" BufExplorer
-nmap <Leader><Space> :BufExplorer<CR>
-
 " Display
 set ruler
 set showmode
@@ -50,10 +47,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-
-" Insert lines above/below cursor
-nmap <Leader>O I<CR><Esc>
-nmap <Leader>o jI<CR><Esc>
 
 " Detect file updates and reload if no local changes
 if has("autocmd")
@@ -156,9 +149,6 @@ vmap <C-Down> ]egv
 " Visually select the text that was last edited/pasted
 nmap gV `[v`]
 
-" Show only relative paths in Buffer Explorer by default
-let g:bufExplorerShowRelativePath=1
-
 " Change command map prefix for VCS plugin from <Leader>c to <Leader>v
 let VCSCommandMapPrefix = "<Leader>v"
 
@@ -185,13 +175,6 @@ set undodir=/tmp
 
 " Show Gundo navigation window
 nmap <Leader>u :GundoToggle<CR>
-
-" CtrlP finder
-let g:ctrlp_cmd=':CtrlPMixed'
-let g:ctrlp_max_files=30000
-let g:ctrlp_max_height=25
-let g:ctrlp_working_path_mode=0
-let g:ctrlp_mruf_relative=1
 
 " Toggle mouse mode between a and nothing (work around PuTTY copy/paste weirdness)
 nnoremap <silent> <Leader>m :set mouse=a<CR>
@@ -252,6 +235,39 @@ let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#autocompletion_command = "<C-Space>"
 "" Don't auto-complete unless I ask for it with Ctrl-Space
 let g:jedi#popup_on_dot = 0
+
+" Unite.vim plugin
+let g:unite_enable_start_insert = 0
+let g:unite_split_rule = 'botright'
+let g:unite_source_file_rec_max_cache_files = 30000
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <leader><Space> :<C-u>Unite buffer file_mru<cr>
+nnoremap <leader>t :<C-u>Unite -start-insert file_rec/async<cr>
+nnoremap <leader>T :<C-u>Unite -start-insert file<cr>
+nnoremap <leader>o :<C-u>Unite outline<cr>
+nnoremap <leader>a :<C-u>Unite grep:.<cr>
+" Unite grep
+if executable('ag')
+  " Use ag in unite grep source.
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nocolor --nogroup --hidden'
+  let g:unite_source_grep_recursive_opt = ''
+elseif executable('ack-grep')
+  " Use ack in unite grep source.
+  let g:unite_source_grep_command = 'ack-grep'
+  let g:unite_source_grep_default_opts = '--no-heading --no-color -a'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+" Custom mappings for the unite buffer
+autocmd FileType unite call s:unite_settings()
+function! s:unite_settings()
+  " Enable navigation with control-j and control-k in insert mode
+  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
+  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+  " Quick mappings for split and vsplit
+  nnoremap <silent><buffer><expr> s unite#do_action('split')
+  nnoremap <silent><buffer><expr> v unite#do_action('vsplit')
+endfunction
 
 " ixc whitespace styles: tabs with width 2 for html, otherwise spaces width 4
 autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2 noet
