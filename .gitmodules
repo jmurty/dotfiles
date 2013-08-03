@@ -82,6 +82,9 @@
 [submodule "vim/bundle/vimproc.vim"]
 	path = vim/bundle/vimproc.vim
 	url = git@github.com:Shougo/vimproc.vim.git
-[submodule ".vim/bundle/dash"]
-	path = .vim/bundle/dash
+[submodule "vim/bundle/dash"]
+	path = vim/bundle/dash
 	url = git@github.com:rizzatti/dash.vim.git
+[submodule "vim/bundle/funcoo"]
+	path = vim/bundle/funcoo
+	url = git@github.com:rizzatti/funcoo.vim.git
