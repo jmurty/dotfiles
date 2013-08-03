@@ -56,7 +56,7 @@ hgext.bookmarks =
 hgshelve = ~/hgexts/hgshelve/hgshelve.py
 
 # Histedit: http://mercurial.selenic.com/wiki/HisteditExtension
-histedit = ~/hgexts/histedit/hg_histedit.py
+histedit = 
 
 # LocalBranch: https://bitbucket.org/brendan/mercurial-extensions-localbranch/
 localbranch = ~/hgexts/mercurial-extensions-localbranch/localbranch.py

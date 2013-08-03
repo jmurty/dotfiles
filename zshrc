@@ -36,6 +36,9 @@ DISABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(history-substring-search autojump battery brew pip python vagrant virtualenv tmux tmuxinator)
 
+# Include homebrew builds in path
+PATH=/usr/local/bin:$PATH
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -51,9 +54,6 @@ SAVEHIST=10000
 
 EDITOR=vim
 
-# Include homebrew builds in path
-PATH=/usr/local/bin:$PATH
-
 # Include python installs in brew location
 PATH=/usr/local/share/python:/usr/local/share/python3:$PATH
 
@@ -66,6 +66,9 @@ alias scpresume="rsync --partial --progress --rsh=ssh"
 
 # ag: silver searcher
 alias ag="ag --pager=less"
+
+# Cleanup python bytecode files
+alias pycclean="find . -name '*.pyc' -exec rm {} +"
 
 #######
 # Tools
