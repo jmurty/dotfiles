@@ -37,7 +37,7 @@ DISABLE_CORRECTION="true"
 plugins=(history-substring-search autojump battery brew pip python vagrant virtualenv tmux tmuxinator)
 
 # Include homebrew builds in path
-PATH=/usr/local/bin:$PATH
+PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,9 +53,6 @@ SAVEHIST=10000
 # History search key bindings handled by history-substring-search plugin
 
 EDITOR=vim
-
-# Include python installs in brew location
-PATH=/usr/local/share/python:/usr/local/share/python3:$PATH
 
 #########
 # Aliases
