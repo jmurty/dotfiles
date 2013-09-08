@@ -88,3 +88,6 @@
 [submodule "vim/bundle/funcoo"]
 	path = vim/bundle/funcoo
 	url = git@github.com:rizzatti/funcoo.vim.git
+[submodule "vim/bundle/ack.vim"]
+	path = vim/bundle/ack.vim
+	url = git://github.com/mileszs/ack.vim.git
