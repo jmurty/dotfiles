@@ -156,7 +156,7 @@ nmap gV `[v`]
 let VCSCommandMapPrefix = "<Leader>v"
 
 " Tlist/taglist ctags viewer
-nmap <Leader>tl :TlistToggle<CR>
+nmap <Leader>c :TlistToggle<CR>
 let Tlist_WinWidth = 50
 "let Tlist_Ctags_Cmd = "/home/jmurty/local/bin/ctags"
 
@@ -245,7 +245,8 @@ let g:unite_enable_start_insert = 0
 let g:unite_split_rule = 'botright'
 let g:unite_source_file_rec_max_cache_files = 30000
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <leader><Space> :<C-u>Unite buffer file_mru<cr>
+call unite#filters#sorter_default#use(['sorter_rank'])
+nnoremap <leader><Space> :<C-u>Unite buffer<cr>
 nnoremap <leader>t :<C-u>Unite -start-insert file_rec/async<cr>
 nnoremap <leader>T :<C-u>Unite -start-insert file<cr>
 nnoremap <leader>o :<C-u>Unite outline<cr>
@@ -271,6 +272,8 @@ function! s:unite_settings()
   " Quick mappings for split and vsplit
   nnoremap <silent><buffer><expr> s unite#do_action('split')
   nnoremap <silent><buffer><expr> v unite#do_action('vsplit')
+  " Quit quickly while in insert mode
+  imap <buffer> qq <Plug>(unite_exit)
 endfunction
 
 " Dash.app quick search
