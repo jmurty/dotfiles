@@ -32,6 +32,9 @@ set showmode
 set number
 set wildmenu
 
+" Always show the status line
+set laststatus=2
+
 " Status Line base
 set statusline=%<%f%h%m%r\ 
 
