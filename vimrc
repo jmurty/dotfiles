@@ -206,6 +206,7 @@ set mouse=
 
 " Syntastic syntax checking
 let g:syntastic_enable_signs=0
+let g:syntastic_always_populate_loc_list=1
 let g:syntastic_check_on_open=0
 let g:syntastic_echo_current_error=1
 let g:syntastic_enable_highlighting = 1
