@@ -67,6 +67,9 @@ alias ag="ag --pager=less"
 # Cleanup python bytecode files
 alias pycclean="find . -name '*.pyc' -exec rm {} +"
 
+# Cleanup vim swap files
+alias vimclean="find . -name '*.sw[p0]' -exec rm {} +"
+
 #######
 # Tools
 #######
