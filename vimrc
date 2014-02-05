@@ -29,6 +29,7 @@ set wildignore+=*/build/*,*.pyc,*.o,*.obj,*.class,*.png,*.jpg,*.gif
 " Display
 set ruler
 set showmode
+" Toggle 'number' with vim-unimpaired `con` and 'relativenumber' with `cor`
 set number
 set wildmenu
 
@@ -67,7 +68,8 @@ set gdefault
 nnoremap <leader>/ :noh<cr>
 
 " Spelling
-nmap <silent> <leader>s :set spell! spelllang=en_au<CR>
+" Toggle 'spell' with vim-unimpaired `cow`
+"nmap <silent> <leader>s :set spell! spelllang=en_au<CR>
 " English US
 "set spelllang=en_us
 " English AU
@@ -97,16 +99,18 @@ colorscheme wombat256mod
 " Show whitespace characters (toggle with \l)
 set list
 set listchars=tab:>\ ,eol:$,nbsp:.,trail:\ ,extends:>,precedes:<
-nmap <silent> <Leader>l :set list!<CR>
+" Toggle 'list' with vim-unimpaired `col`
+"nmap <silent> <Leader>l :set list!<CR>
 " Highlight SpecialKey (nbsp, tab, trail)
 "highlight SpecialKey ctermbg=darkred guibg=darkred
 
 " Highlight max-width column (7.3+)
 set colorcolumn=80
 
-" Set text width for auto-wrapping (need 'tc' in formatoptions, see ,w/,W)
+" Set text width for auto-wrapping (need 'tc' in formatoptions, see ,wr/,WR)
 set textwidth=79
 
+" Toggle 'wrap' with vim-unimpaired `cow`
 " Toggle automatic line-wrapping on and off
 nmap <Leader>wr :set formatoptions+=tc<CR>
 nmap <Leader>WR :set formatoptions-=tc<CR>
@@ -115,6 +119,7 @@ nmap <Leader>WR :set formatoptions-=tc<CR>
 "nmap <Leader>ws /\s\+$\\|\t<CR>
 
 " Highlight current line
+" Toggle 'cursorline' with vim-unimpaired `coc`
 "set cursorline
 
 " Coding (Tabs and indentation)
