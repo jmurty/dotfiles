@@ -58,7 +58,7 @@ load-plugins=
 # R0913 Too many arguments
 # R0904 Too many public methods
 # C0325 Unnecessary parens after %r keyword (superfluous-parens)
-disable=C0111,R0914,R0915,R0912,C0325
+disable=C0111,R0914,R0915,R0912,C0325,C0103
 
 
 [REPORTS]
