@@ -217,6 +217,7 @@ set mouse=
 let g:pymode_lint = 0
 " Auto-folds on file open, annoying. But sadly we lose fold markers
 let g:pymode_folding = 0
+let g:pymode_trim_whitespaces = 0
 
 " Syntastic syntax checking
 let g:syntastic_enable_signs=0
