@@ -30,7 +30,7 @@ set wildignore+=*/build/*,*.pyc,*.o,*.obj,*.class,*.png,*.jpg,*.gif
 set ruler
 set showmode
 " Toggle 'number' with vim-unimpaired `con` and 'relativenumber' with `cor`
-set number
+set nonumber
 set wildmenu
 
 " Always show the status line
@@ -90,6 +90,8 @@ colorscheme wombat256mod
 "colorscheme mustang
 "colorscheme desert256
 "colorscheme xoria256
+highlight SignColumn ctermbg=232
+highlight ColorColumn term=NONE ctermfg=darkred ctermbg=NONE
 
 " Colorized theme (in compatibility mode with 256-color terminal)
 "set background=dark
@@ -218,18 +220,28 @@ let g:pymode_lint = 0
 " Auto-folds on file open, annoying. But sadly we lose fold markers
 let g:pymode_folding = 0
 let g:pymode_trim_whitespaces = 0
+let g:pymode_rope = 1
+let g:pymode_rope_complete_on_dot = 0
+let g:pymode_rope_autoimport_modules = ['os', 'shutil', 'datetime', 'django.*']
 
 " Syntastic syntax checking
-let g:syntastic_enable_signs=0
+let g:syntastic_python_checkers = ['pylint', 'flake8', 'pyflakes']
+let g:syntastic_aggregate_errors=1
+let g:syntastic_enable_signs=1
 let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=2
 let g:syntastic_check_on_open=0
 let g:syntastic_echo_current_error=1
-let g:syntastic_enable_highlighting = 1
 let g:syntastic_auto_jump=0
 let g:syntastic_quiet_messages = {}
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'passive_filetypes': [],
                            \ 'active_filetypes': [] }
+let g:syntastic_enable_highlighting = 1
+highlight SyntasticErrorLine ctermbg=darkred guibg=darkred
+"highlight SyntasticErrorSign ctermbg=darkred guibg=darkred
+highlight SyntasticWarningLine ctermbg=darkmagenta guibg=darkmagenta
+highlight SyntasticWarningSign ctermbg=darkmagenta guibg=darkmagenta
 " Show syntastic warning in status line
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -289,3 +301,18 @@ nmap <silent> <Leader>D <Plug>DashSearch
 autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2 noet
 autocmd Filetype html setlocal ts=2 sts=2 sw=2 noet
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2 noet
+
+" Setup Vim's python interpreter (and thus rope, etc) to use a Django project
+" See http://blag.felixhummel.de/vim/django_completion.html
+"py << EOF
+"import os
+"if 'VIRTUAL_ENV' in os.environ:
+"    import sys
+"    project_base_dir = os.environ['VIRTUAL_ENV']
+"
+"    sys.path.insert(0, project_base_dir)
+"    sys.path.append('.')
+"
+"    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"    execfile(activate_this, dict(__file__=activate_this))
+"EOF
