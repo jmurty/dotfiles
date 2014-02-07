@@ -212,6 +212,12 @@ set mouse=
 "  set clipboard=unnamed
 "endif
 
+" python-mode plugin
+" Linting is worse than Syntastic so just disable it
+let g:pymode_lint = 0
+" Auto-folds on file open, annoying. But sadly we lose fold markers
+let g:pymode_folding = 0
+
 " Syntastic syntax checking
 let g:syntastic_enable_signs=0
 let g:syntastic_always_populate_loc_list=1
@@ -219,7 +225,7 @@ let g:syntastic_check_on_open=0
 let g:syntastic_echo_current_error=1
 let g:syntastic_enable_highlighting = 1
 let g:syntastic_auto_jump=0
-let g:syntastic_quiet_warnings=0
+let g:syntastic_quiet_messages = {}
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'passive_filetypes': [],
                            \ 'active_filetypes': [] }
