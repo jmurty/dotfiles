@@ -222,7 +222,7 @@ let g:pymode_folding = 0
 let g:pymode_trim_whitespaces = 0
 let g:pymode_rope = 1
 let g:pymode_rope_complete_on_dot = 0
-let g:pymode_rope_autoimport_modules = ['os', 'shutil', 'datetime', 'django.*']
+let g:pymode_rope_autoimport_modules = ['os', 'shutil', 'datetime', 'django']
 
 " Syntastic syntax checking
 let g:syntastic_python_checkers = ['pylint', 'flake8', 'pyflakes']
@@ -302,17 +302,23 @@ autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2 noet
 autocmd Filetype html setlocal ts=2 sts=2 sw=2 noet
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2 noet
 
-" Setup Vim's python interpreter (and thus rope, etc) to use a Django project
+" Setup Vim's python interpreter (and thus rope, etc) to use a virtualenv
 " See http://blag.felixhummel.de/vim/django_completion.html
-"py << EOF
-"import os
-"if 'VIRTUAL_ENV' in os.environ:
-"    import sys
-"    project_base_dir = os.environ['VIRTUAL_ENV']
-"
-"    sys.path.insert(0, project_base_dir)
-"    sys.path.append('.')
-"
-"    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"    execfile(activate_this, dict(__file__=activate_this))
-"EOF
+py << EOF
+import os
+# Activate virtualenv
+if 'VIRTUAL_ENV' in os.environ:
+    import sys
+    project_base_dir = os.environ['VIRTUAL_ENV']
+
+    sys.path.insert(0, project_base_dir)
+    sys.path.append('.')
+
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+
+# Pre-import django stuff
+if 'DJANGO_SETTINGS_MODULE' in os.environ:
+    import django
+    import django.db
+EOF

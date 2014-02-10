@@ -11,3 +11,5 @@ tags
 *.pyc
 # Vagrant local VMs
 .vagrant
+# Rope Project - Python refactoring tool
+.ropeproject
