@@ -225,7 +225,7 @@ let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_autoimport_modules = ['os', 'shutil', 'datetime', 'django']
 
 " Syntastic syntax checking
-let g:syntastic_python_checkers = ['pylint', 'flake8', 'pyflakes']
+let g:syntastic_python_checkers = ['flake8', 'pyflakes']
 let g:syntastic_aggregate_errors=1
 let g:syntastic_enable_signs=1
 let g:syntastic_always_populate_loc_list=1

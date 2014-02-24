@@ -41,6 +41,7 @@ load-plugins=
 
 # See `pylint --list-msgs`
 #
+# C1001 Old-style class defined
 # C0111 Missing docstring
 # I0011 Warning locally suppressed using disable-msg
 # I0012 Warning locally suppressed using disable-msg
@@ -52,13 +53,14 @@ load-plugins=
 # W0702 No exception's type specified Used when an except clause doesn't specify exceptions type to catch.
 # R0201 Method could be a function
 # W0614 Unused import XYZ from wildcard import
+# R0903 Too few public methods
 # R0914 Too many local variables
 # R0912 Too many branches
 # R0915 Too many statements
 # R0913 Too many arguments
 # R0904 Too many public methods
 # C0325 Unnecessary parens after %r keyword (superfluous-parens)
-disable=C0111,R0914,R0915,R0912,C0325,C0103
+disable=C1001,C0111,R0903,R0914,R0915,R0912,C0325,C0103
 
 
 [REPORTS]
