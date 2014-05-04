@@ -58,6 +58,10 @@ EDITOR=vim
 # Aliases
 #########
 
+# zmv
+autoload zmv
+alias zcp='zmv -C'
+
 # scp resume - http://panela.blog-city.com/resume_scp_after_interrupted_downloads_use_rsync.htm
 alias scpresume="rsync --partial --progress --rsh=ssh"
 
@@ -73,6 +77,9 @@ alias vimclean="find . -name '*.sw[p0]' -exec rm {} +"
 #######
 # Tools
 #######
+
+# Force Python UTF-8 (if LC_CTYPE doesn't work)
+#PYTHONIOENCODING=utf-8
 
 # Pip config
 PIP_RESPECT_VIRTUALENV=true
