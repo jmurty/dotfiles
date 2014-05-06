@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+
+clean %:
+	dh $@ --with python2 --buildsystem=python_distutils
+
+build:
+	dh build --with python2 --buildsystem=python_distutils
+	$(MAKE) -C docs
+
+ifeq (,$(filter nocheck, $(DEB_BUILD_OPTIONS)))
+override_dh_auto_test:
+	cd tests &&  python run-tests.py --with-hg=`which hg`
+endif
+
+override_dh_python2:
+	# avoid conflict with mercurial's own hgext/__init__.py
+	find debian -name __init__.py -delete
+	dh_python2
+
+clean: clean-docs
+
+clean-docs:
+	rm -rf html
+	rm -f docs/static/logo-evolve.ico
+	rm -f docs/tutorials/tutorial.rst
+
+.PHONY: build clean clean-docs

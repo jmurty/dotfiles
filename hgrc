@@ -18,6 +18,9 @@ vimdiff.executable = vim
 vimdiff.args = -f -d -c "wincmd J" "$output" "$local" "$other" "$base"
 
 [extensions]
+
+#evolve = ~/hgexts/mutable-history/hgext/evolve.py
+
 # http://mercurial.selenic.com/wiki/PagerExtension
 pager =
 hgext.convert =
@@ -53,7 +56,7 @@ rebase =
 hgext.bookmarks =
 
 # HgShelve: http://mercurial.selenic.com/wiki/ShelveExtension
-hgshelve = ~/hgexts/hgshelve/hgshelve.py
+shelve = 
 
 # Histedit: http://mercurial.selenic.com/wiki/HisteditExtension
 histedit = 
@@ -74,4 +77,4 @@ qseries.unapplied = black bold white_background
 [web]
 # Quiet HTTPS certificate warnings, see
 # http://mercurial.selenic.com/wiki/CACertificates#Mac_OS_X_10.6_and_higher
-cacerts = ~/.hg-dummycert.pem
+#cacerts = ~/.hg-dummycert.pem
