@@ -74,6 +74,15 @@ alias pycclean="find . -name '*.pyc' -exec rm {} +"
 # Cleanup vim swap files
 alias vimclean="find . -name '*.sw[p0]' -exec rm {} +"
 
+# Run Ant
+alias ant=~/Documents/code/java/apache-ant-1.9.2/bin/ant
+
+# Run Maven
+alias mvn=~/Documents/code/java/apache-maven-3.2.1/bin/mvn
+
+# Run Markdown
+alias markdown=~/Documents/code/Markdown.pl
+
 #######
 # Tools
 #######
