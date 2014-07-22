@@ -115,3 +115,6 @@ VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 
 ### Added by the Heroku Toolbelt
 PATH="/usr/local/heroku/bin:$PATH"
+
+# Overide Apple Java JDK
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
