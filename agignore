@@ -2,3 +2,4 @@ migrations
 build
 .tox
 CACHE
+tags
