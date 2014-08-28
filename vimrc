@@ -250,6 +250,13 @@ set statusline+=%*
 " Add content to end of status line
 set statusline+=%=%-10.(%l,%c%V%)\ %P
 
+" vim-markdown plugin
+let g:vim_markdown_folding_disabled=0
+let g:vim_markdown_initial_foldlevel=3
+if has("autocmd")
+    autocmd FileType mkd setlocal spell wrap nolist textwidth=0 colorcolumn=0 tabstop=2 softtabstop=2 shiftwidth=2
+endif
+
 " vim-fugitive Git wrapper
 if has("autocmd")
     " Auto-delete fugitive git buffers when you leave them
