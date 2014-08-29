@@ -142,9 +142,9 @@ set viminfo='100,f1
 set hidden
 
 " Auto-apply changes to .vimrc file
-if has("autocmd")
-    autocmd bufwritepost .vimrc source $MYVIMRC
-endif
+"if has("autocmd")
+"    autocmd bufwritepost .vimrc source $MYVIMRC
+"endif
 
 " Quick-edit .vimrc
 nmap <Leader>V :sp $MYVIMRC<CR>
@@ -268,7 +268,7 @@ endif
 " Unite.vim plugin
 let g:unite_enable_start_insert = 0
 let g:unite_split_rule = 'botright'
-let g:unite_source_file_rec_max_cache_files = 30000
+let g:unite_source_file_rec_max_cache_files = 15000
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 call unite#custom#source('file_rec/async', 'ignore_pattern', '\.\(swp\|jpg\|png\|gif\|pdf\)$')
@@ -293,8 +293,8 @@ endif
 autocmd FileType unite call s:unite_settings()
 function! s:unite_settings()
   " Enable navigation with control-j and control-k in insert mode
-  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
-  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+  imap <buffer> <C-j> <Plug>(unite_select_next_line)
+  imap <buffer> <C-k> <Plug>(unite_select_previous_line)
   " Quick mappings for split and vsplit
   nnoremap <silent><buffer><expr> s unite#do_action('split')
   nnoremap <silent><buffer><expr> v unite#do_action('vsplit')
