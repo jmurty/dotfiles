@@ -271,6 +271,7 @@ let g:unite_split_rule = 'botright'
 let g:unite_source_file_rec_max_cache_files = 30000
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
+call unite#custom#source('file_rec/async', 'ignore_pattern', '\.\(swp\|jpg\|png\|gif\|pdf\)$')
 nnoremap <leader><Space> :<C-u>Unite buffer<cr>
 nnoremap <leader>t :<C-u>Unite -start-insert file_rec/async<cr>
 nnoremap <leader>T :<C-u>Unite -start-insert file<cr>
