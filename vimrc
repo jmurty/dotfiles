@@ -266,14 +266,17 @@ endif
 "set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " Unite.vim plugin
-let g:unite_enable_start_insert = 0
-let g:unite_split_rule = 'botright'
-let g:unite_source_file_rec_max_cache_files = 15000
+call unite#custom#profile('default', 'context', {
+\   'start_insert': 0,
+\   'direction': 'botright',
+\   'prompt_direction' : 'top',
+\ })
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_rank'])
+call unite#filters#sorter_default#use(['sorter_selecta'])
 call unite#custom#source('file_rec/async', 'ignore_pattern', '\.\(swp\|jpg\|png\|gif\|pdf\)$')
 nnoremap <leader><Space> :<C-u>Unite buffer<cr>
 nnoremap <leader>t :<C-u>Unite -start-insert file_rec/async<cr>
+nnoremap <leader>g :<C-u>Unite -start-insert file_rec/git:--cached:--others:--exclude-standard<cr>
 nnoremap <leader>T :<C-u>Unite -start-insert file<cr>
 nnoremap <leader>o :<C-u>Unite outline<cr>
 nnoremap <leader>a :<C-u>Unite grep:.<cr>
@@ -281,12 +284,12 @@ nnoremap <leader>a :<C-u>Unite grep:.<cr>
 if executable('ag')
   " Use ag in unite grep source.
   let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nocolor --nogroup --hidden'
+  let g:unite_source_grep_default_opts = '-i --line-numbers --nocolor --nogroup --hidden'
   let g:unite_source_grep_recursive_opt = ''
 elseif executable('ack-grep')
   " Use ack in unite grep source.
   let g:unite_source_grep_command = 'ack-grep'
-  let g:unite_source_grep_default_opts = '--no-heading --no-color -a'
+  let g:unite_source_grep_default_opts = '-i --no-heading --no-color -a'
   let g:unite_source_grep_recursive_opt = ''
 endif
 " Custom mappings for the unite buffer
@@ -295,9 +298,6 @@ function! s:unite_settings()
   " Enable navigation with control-j and control-k in insert mode
   imap <buffer> <C-j> <Plug>(unite_select_next_line)
   imap <buffer> <C-k> <Plug>(unite_select_previous_line)
-  " Quick mappings for split and vsplit
-  nnoremap <silent><buffer><expr> s unite#do_action('split')
-  nnoremap <silent><buffer><expr> v unite#do_action('vsplit')
   " Quit quickly while in insert mode
   imap <buffer> qq <Plug>(unite_exit)
 endfunction
