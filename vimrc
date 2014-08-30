@@ -85,7 +85,7 @@ syntax enable
 if has("autocmd")
     autocmd ColorScheme * highlight MyWarning ctermbg=darkred guibg=darkred
 endif
-colorscheme wombat256mod
+"colorscheme wombat256mod
 "colorscheme oceanblack256
 "colorscheme mustang
 "colorscheme desert256
@@ -93,10 +93,11 @@ colorscheme wombat256mod
 highlight SignColumn ctermbg=232
 highlight ColorColumn term=NONE ctermfg=darkred ctermbg=NONE
 
-" Colorized theme (in compatibility mode with 256-color terminal)
-"set background=dark
-"let g:solarized_termcolors=256
-"colorschem solarized
+" Solarized theme - https://github.com/altercation/vim-colors-solarized
+"let g:solarized_termcolors=256  " Set this only if terminal doesn't have Solarized colour palette
+"let g:solarized_contrast="high"
+set background=dark
+colorscheme solarized
 
 " Show whitespace characters (toggle with \l)
 set list
@@ -273,7 +274,7 @@ call unite#custom#profile('default', 'context', {
 \ })
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_selecta'])
-call unite#custom#source('file_rec/async', 'ignore_pattern', '\.\(swp\|jpg\|png\|gif\|pdf\)$')
+call unite#custom#source('file_rec/async', 'ignore_pattern', '\.\(swp\|pyc\|jpg\|png\|gif\|pdf\)$')
 nnoremap <leader><Space> :<C-u>Unite buffer<cr>
 nnoremap <leader>t :<C-u>Unite -start-insert file_rec/async<cr>
 nnoremap <leader>g :<C-u>Unite -start-insert file_rec/git:--cached:--others:--exclude-standard<cr>
