@@ -268,7 +268,7 @@ endif
 
 " Unite.vim plugin
 call unite#custom#profile('default', 'context', {
-\   'start_insert': 0,
+\   'start_insert': 1,
 \   'direction': 'botright',
 \   'prompt_direction' : 'top',
 \ })
@@ -276,9 +276,9 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_selecta'])
 call unite#custom#source('file_rec/async', 'ignore_pattern', '\.\(swp\|pyc\|jpg\|png\|gif\|pdf\)$')
 nnoremap <leader><Space> :<C-u>Unite buffer<cr>
-nnoremap <leader>t :<C-u>Unite -start-insert file_rec/async<cr>
-nnoremap <leader>g :<C-u>Unite -start-insert file_rec/git:--cached:--others:--exclude-standard<cr>
-nnoremap <leader>T :<C-u>Unite -start-insert file<cr>
+nnoremap <leader>t :<C-u>Unite file_rec/async<cr>
+nnoremap <leader>g :<C-u>Unite file_rec/git:--cached:--others:--exclude-standard<cr>
+nnoremap <leader>T :<C-u>Unite file<cr>
 nnoremap <leader>o :<C-u>Unite outline<cr>
 nnoremap <leader>a :<C-u>Unite grep:.<cr>
 " Unite grep
