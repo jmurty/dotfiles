@@ -307,9 +307,9 @@ endfunction
 nmap <silent> <Leader>D <Plug>DashSearch
 
 " ixc whitespace styles: tabs with width 2 for html, otherwise spaces width 4
-autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2 noet
-autocmd Filetype html setlocal ts=2 sts=2 sw=2 noet
-autocmd Filetype scss setlocal ts=2 sts=2 sw=2 noet
+autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2 noet colorcolumn=0
+autocmd Filetype html setlocal ts=2 sts=2 sw=2 noet colorcolumn=0
+autocmd Filetype scss setlocal ts=2 sts=2 sw=2 noet colorcolumn=0
 
 " Setup Vim's python interpreter (and thus rope, etc) to use a virtualenv
 " See http://blag.felixhummel.de/vim/django_completion.html
