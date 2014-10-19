@@ -99,7 +99,7 @@ then
 fi
 
 # Tmuxinator
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+#[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 #############
 # Virtualenvs
@@ -111,10 +111,10 @@ source /usr/local/bin/virtualenvwrapper.sh
 #########
 # Vagrant
 #########
-VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+#VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 
 ### Added by the Heroku Toolbelt
-PATH="/usr/local/heroku/bin:$PATH"
+#PATH="/usr/local/heroku/bin:$PATH"
 
 # Overide Apple Java JDK
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
