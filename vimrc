@@ -82,16 +82,16 @@ set guioptions=egmrLt
 syntax enable
 
 " Color scheme
-if has("autocmd")
-    autocmd ColorScheme * highlight MyWarning ctermbg=darkred guibg=darkred
-endif
+"if has("autocmd")
+"    autocmd ColorScheme * highlight MyWarning ctermbg=darkred guibg=darkred
+"endif
 "colorscheme wombat256mod
 "colorscheme oceanblack256
 "colorscheme mustang
 "colorscheme desert256
 "colorscheme xoria256
-highlight SignColumn ctermbg=232
-highlight ColorColumn term=NONE ctermfg=darkred ctermbg=NONE
+"highlight SignColumn ctermbg=232
+"highlight ColorColumn term=NONE ctermfg=darkred ctermbg=NONE
 
 " Solarized theme - https://github.com/altercation/vim-colors-solarized
 "let g:solarized_termcolors=256  " Set this only if terminal doesn't have Solarized colour palette
@@ -239,10 +239,10 @@ let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'passive_filetypes': [],
                            \ 'active_filetypes': [] }
 let g:syntastic_enable_highlighting = 1
-highlight SyntasticErrorLine ctermbg=darkred guibg=darkred
+"highlight SyntasticErrorLine ctermbg=darkred guibg=darkred
 "highlight SyntasticErrorSign ctermbg=darkred guibg=darkred
-highlight SyntasticWarningLine ctermbg=darkmagenta guibg=darkmagenta
-highlight SyntasticWarningSign ctermbg=darkmagenta guibg=darkmagenta
+"highlight SyntasticWarningLine ctermbg=darkmagenta guibg=darkmagenta
+"highlight SyntasticWarningSign ctermbg=darkmagenta guibg=darkmagenta
 " Show syntastic warning in status line
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
