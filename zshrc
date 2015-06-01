@@ -74,6 +74,9 @@ alias pycclean="find . -name '*.pyc' -exec rm {} +"
 # Cleanup vim swap files
 alias vimclean="find . -name '*.sw[p0]' -exec rm {} +"
 
+# Run ctags in Python virtualenv project
+alias ctags-virtualenv='ack --python --ignore-dir=locale -f . $VIRTUAL_ENV | ctags -L -'
+
 # Run Ant
 alias ant=~/Documents/code/java/apache-ant-1.9.2/bin/ant
 
@@ -92,11 +95,11 @@ alias markdown=~/Documents/code/Markdown.pl
 
 # Pip config
 PIP_RESPECT_VIRTUALENV=true
-PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache
-if [ ! -d $PIP_DOWNLOAD_CACHE ]
-then
-    mkdir $PIP_DOWNLOAD_CACHE
-fi
+#PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache
+#if [ ! -d $PIP_DOWNLOAD_CACHE ]
+#then
+#    mkdir $PIP_DOWNLOAD_CACHE
+#fi
 
 # Tmuxinator
 #[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
@@ -118,3 +121,9 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Overide Apple Java JDK
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home
+
+########
+# golang
+########
+
+PATH=$PATH:/usr/local/opt/go/libexec/bin
