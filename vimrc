@@ -78,7 +78,7 @@ set spelllang=en_au
 " GUI Options (e.g. MacVim)
 set guioptions=egmrLt
 
-" Sytax coloring
+" Syntax coloring
 syntax enable
 
 " Color scheme
