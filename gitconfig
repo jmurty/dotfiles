@@ -19,6 +19,7 @@
   # Only push branches that have been set up to track a remote branch,
   # and push them directly to the upstream tracked branch.
   default = upstream
+	followTags = true
 [apply]
   whitespace = warn
 [alias]
