@@ -35,3 +35,7 @@
   current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
   # Usage: git track origin/feature-123-login-form
   track = checkout -t
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
