@@ -40,6 +40,8 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
+[mergetool]
+	keepBackup = true
 [merge]
 	ff = false
 [pull]
