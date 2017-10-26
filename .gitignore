@@ -1,0 +1,12 @@
+# Ignore nvim minpac installations and other stuff
+/config/nvim/pack
+/config/nvim/spell/*.spl
+/config/nvim/spell/*.sug
+
+# Ignore apps for which I don't want to track configs
+/config/wireshark
+/config/stetic
+/config/xbuild
+/config/configstore
+/config/git
+/config/robomongo
