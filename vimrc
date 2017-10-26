@@ -68,7 +68,7 @@ set gdefault
 nnoremap <leader>/ :noh<cr>
 
 " Spelling
-" Toggle 'spell' with vim-unimpaired `cow`
+" Toggle 'spell' with vim-unimpaired `cos`
 "nmap <silent> <leader>s :set spell! spelllang=en_au<CR>
 " English US
 "set spelllang=en_us
@@ -208,7 +208,7 @@ if has('mouse')
 endif
 
 " Disable mouse support
-set mouse=
+"set mouse=
 
 " Use OS X clipboard as yank buffer (7.3+)
 "if has("mac")
