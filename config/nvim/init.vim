@@ -180,7 +180,7 @@ colorscheme NeoSolarized
 " vim-airline
 """""""""""""
 
-" TODO Not working
+" TODO Not working?
 let g:airline_powerline_fonts = 1
 
 
@@ -188,8 +188,8 @@ let g:airline_powerline_fonts = 1
 " vim-airline-themes
 """"""""""""""""""""
 
-AirlineTheme solarized
-let g:airline_solarized_bg='dark'
+AirlineTheme powerlineish
+"let g:airline_solarized_bg='dark'  " For solarized theme
 
 
 """""""
@@ -237,7 +237,7 @@ call denite#custom#option('default', {
     \ 'prompt': '❯',
     \ 'highlight_mode_insert': 'PmenuSel',
     \ 'highlight_mode_normal': 'PmenuSel',
-    \ 'highlight_matched_char': 'Search',
+    \ 'highlight_matched_char': 'Special',
     \ 'source_names': 'short',
     \ })
 
