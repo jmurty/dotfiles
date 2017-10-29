@@ -155,6 +155,7 @@ call minpac#add('tpope/vim-unimpaired')
 call minpac#add('nelstrom/vim-visual-star-search')
 call minpac#add('vim-scripts/YankRing.vim')
 call minpac#add('Shougo/denite.nvim')
+call minpac#add('chemzqm/unite-location')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('christoomey/vim-tmux-navigator')
@@ -310,3 +311,11 @@ nnoremap <leader>T :<C-u>Denite file<cr>
 nnoremap <leader>o :<C-u>Denite outline<cr>
 nnoremap <leader>a :<C-u>Denite grep:. -mode=normal<cr>
 nnoremap <leader>h :<C-u>Denite command_history<cr>
+
+
+""""""""""""""""""""""""""""""""
+" unite-location (Denite plugin)
+""""""""""""""""""""""""""""""""
+
+nnoremap <leader>L :<C-u>Denite location_list<cr>
+nnoremap <leader>Q :<C-u>Denite quickfix_list<cr>
