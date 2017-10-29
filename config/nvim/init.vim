@@ -157,6 +157,7 @@ call minpac#add('vim-scripts/YankRing.vim')
 call minpac#add('Shougo/denite.nvim')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
+call minpac#add('christoomey/vim-tmux-navigator')
 
 " Define user commands for updating/cleaning the plugins.
 " Each of them loads minpac, reloads config to register the
