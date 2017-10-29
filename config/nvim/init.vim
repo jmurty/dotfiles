@@ -276,23 +276,23 @@ endif
 " Change mappings for Denite buffer
 " Enable navigation with control-j and control-k in insert mode
 call denite#custom#map(
-      \ '_',
+      \ 'insert',
       \ '<C-j>',
       \ '<denite:move_to_next_line>',
       \ 'noremap'
       \)
 call denite#custom#map(
-      \ '_',
+      \ 'insert',
       \ '<C-k>',
       \ '<denite:move_to_previous_line>',
       \ 'noremap'
       \)
 "" Switch to normal mode on <ESC> in insert mode
-"call denite#custom#map('insert', '<Esc>', '<denite:enter_mode:normal>',
-"      \'noremap')
-"" Don't exit Denite when <ESC> in normal mode
-"call denite#custom#map('normal', '<Esc>', '<denite:quit>',
-"      \'noremap')
+call denite#custom#map('insert', '<Esc>', '<denite:enter_mode:normal>',
+      \'noremap')
+"" Exit Denite when <ESC> in normal mode
+call denite#custom#map('normal', '<Esc>', '<denite:quit>',
+      \'noremap')
 " Quit quickly while in insert mode
 call denite#custom#map(
       \ 'insert',
