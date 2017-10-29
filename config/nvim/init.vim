@@ -239,7 +239,7 @@ call denite#custom#option('default', {
     \ 'prompt': '❯',
     \ 'highlight_mode_insert': 'PmenuSel',
     \ 'highlight_mode_normal': 'PmenuSel',
-    \ 'highlight_matched_char': 'Special',
+    \ 'highlight_matched_char': 'Todo',
     \ 'source_names': 'short',
     \ })
 
