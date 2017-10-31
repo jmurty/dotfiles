@@ -202,6 +202,10 @@ let g:airline_powerline_fonts = 1
 " Disable word count in status bar
 let g:airline#extensions#wordcount#enabled = 0
 
+" Don't show 'hunks' (GitGutter) summary in statusline
+" NOTE: This doesn't work? `let g:airline#extensions#hunks#enabled = 0`
+let g:airline_section_b = airline#section#create(['branch'])
+
 " Don't show file format if it's what I generally expect
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 
