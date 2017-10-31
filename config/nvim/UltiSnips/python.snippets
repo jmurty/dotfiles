@@ -1,0 +1,25 @@
+# See https://github.com/honza/vim-snippets/blob/master/UltiSnips/python.snippets
+priority -50
+
+
+snippet pdb "pdb" b
+import pdb; pdb.set_trace()
+endsnippet
+
+
+snippet ipdb "ipdb" b
+import ipdb; ipdb.set_trace()
+endsnippet
+
+
+snippet utf-8 "Python utf-8 coding header" b
+# -*- coding: utf-8 -*-
+
+$0
+endsnippet
+
+
+snippet ifmain "ifmain" b
+if __name__ == "__main__":
+    ${1:${VISUAL:main()}}
+endsnippet
