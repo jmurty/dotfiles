@@ -106,6 +106,16 @@ nmap <Leader>c :TlistToggle<CR>
 let Tlist_WinWidth = 50
 "let Tlist_Ctags_Cmd = "/home/jmurty/local/bin/ctags"
 
+" Enable mouse control
+" https://wincent.com/blog/tweaking-command-t-and-vim-for-use-in-the-terminal-and-tmux
+if has('mouse')
+  set mouse=a
+
+  " Toggle mouse mode between 'a' and nothing
+  nnoremap <silent> <Leader>m :set mouse=a<CR>
+  nnoremap <silent> <Leader>M :set mouse=<CR>
+endif
+
 
 """"""""""""""""""
 " Whitespace Rules
