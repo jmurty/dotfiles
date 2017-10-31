@@ -169,7 +169,7 @@ call minpac#add('chemzqm/unite-location')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('christoomey/vim-tmux-navigator')
-call minpac#add('vim-scripts/indentpython.vim')
+call minpac#add('sheerun/vim-polyglot')
 call minpac#add('SirVer/ultisnips')
 call minpac#add('Shougo/deoplete.nvim')
 
