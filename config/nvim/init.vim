@@ -169,6 +169,7 @@ call minpac#add('chemzqm/unite-location')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('christoomey/vim-tmux-navigator')
+call minpac#add('vim-scripts/indentpython.vim')
 
 " Define user commands for updating/cleaning the plugins.
 " Each of them loads minpac, reloads config to register the
