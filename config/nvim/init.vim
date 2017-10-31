@@ -286,7 +286,7 @@ elseif executable('ack-grep')
 endif
 
 " Change mappings for Denite buffer
-" Enable navigation with control-j and control-k in insert mode
+" Enable navigation with control-j and control-k in insert and normal modes
 call denite#custom#map(
       \ 'insert',
       \ '<C-j>',
@@ -295,6 +295,18 @@ call denite#custom#map(
       \)
 call denite#custom#map(
       \ 'insert',
+      \ '<C-k>',
+      \ '<denite:move_to_previous_line>',
+      \ 'noremap'
+      \)
+call denite#custom#map(
+      \ 'normal',
+      \ '<C-j>',
+      \ '<denite:move_to_next_line>',
+      \ 'noremap'
+      \)
+call denite#custom#map(
+      \ 'normal',
       \ '<C-k>',
       \ '<denite:move_to_previous_line>',
       \ 'noremap'
