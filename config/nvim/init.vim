@@ -173,7 +173,6 @@ call minpac#add('vim-scripts/indentpython.vim')
 call minpac#add('SirVer/ultisnips')
 call minpac#add('Shougo/deoplete.nvim')
 call minpac#add('airblade/vim-gitgutter')
-call minpac#add('justinmk/vim-sneak')
 
 " Define user commands for updating/cleaning the plugins.
 " Each of them loads minpac, reloads config to register the
