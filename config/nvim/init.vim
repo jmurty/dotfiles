@@ -3,7 +3,7 @@
 """"""""""""""""""
 
 " Remap leader character from \
-let mapleader = ","
+let mapleader = " "
 
 " Ignore files in general
 set wildignore+=*/build/*,*.pyc,*.o,*.obj,*.class,*.png,*.jpg,*.gif
