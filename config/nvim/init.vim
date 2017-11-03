@@ -130,10 +130,19 @@ autocmd Filetype scss setlocal ts=2 sts=2 sw=2 noet colorcolumn=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python Provider
 " See https://neovim.io/doc/user/provider.html#provider-python
-"""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:python_host_prog = '/Users/jmurty/Documents/code/virtualenvs/py2neovim/bin/python'
 let g:python3_host_prog = '/Users/jmurty/Documents/code/virtualenvs/py3neovim/bin/python'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim-sneak
+" These settings must go *before* `packloadall` to take effect
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Use smartcase settings to respect/ignore case in search
+let g:sneak#use_ic_scs = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -174,6 +183,7 @@ call minpac#add('airblade/vim-gitgutter')
 call minpac#add('gabrielelana/vim-markdown')
 call minpac#add('python-mode/python-mode')
 call minpac#add('michaeljsmith/vim-indent-object')
+call minpac#add('justinmk/vim-sneak')
 
 " Define user commands for updating/cleaning the plugins.
 " Each of them loads minpac, reloads config to register the
