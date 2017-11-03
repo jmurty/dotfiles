@@ -173,6 +173,7 @@ call minpac#add('tpope/vim-unimpaired')
 call minpac#add('nelstrom/vim-visual-star-search')
 call minpac#add('vim-scripts/YankRing.vim')
 call minpac#add('Shougo/denite.nvim')
+call minpac#add('Shougo/neomru.vim')
 call minpac#add('chemzqm/unite-location')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
@@ -397,6 +398,7 @@ call denite#custom#map(
 nnoremap <leader><Space> :<C-u>Denite buffer -mode=normal<cr>
 nnoremap <leader>t :<C-u>Denite file_rec<cr>
 nnoremap <leader>g :<C-u>Denite file_rec/git -unique<cr>
+nnoremap <leader>R :<C-u>Denite file_mru<cr>
 nnoremap <leader>T :<C-u>Denite file<cr>
 nnoremap <leader>o :<C-u>Denite outline<cr>
 nnoremap <leader>a :<C-u>Denite grep:. -mode=normal<cr>
