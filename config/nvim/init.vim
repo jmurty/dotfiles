@@ -361,5 +361,5 @@ nnoremap <leader>h :<C-u>Denite command_history<cr>
 " unite-location (Denite plugin)
 """"""""""""""""""""""""""""""""
 
-nnoremap <leader>L :<C-u>Denite location_list<cr>
-nnoremap <leader>Q :<C-u>Denite quickfix_list<cr>
+nnoremap <leader>l :<C-u>Denite location_list<cr>
+nnoremap <leader>q :<C-u>Denite quickfix<cr>
