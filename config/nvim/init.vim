@@ -156,7 +156,6 @@ call minpac#add('vim-scripts/bad-whitespace')
 call minpac#add('iCyMind/NeoSolarized')
 call minpac#add('tommcdo/vim-exchange')
 call minpac#add('tpope/vim-fugitive')
-call minpac#add('michaeljsmith/vim-indent-object')
 call minpac#add('tmhedberg/matchit')
 call minpac#add('tpope/vim-repeat')
 call minpac#add('tpope/vim-speeddating')
@@ -169,11 +168,12 @@ call minpac#add('chemzqm/unite-location')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('christoomey/vim-tmux-navigator')
-call minpac#add('vim-scripts/indentpython.vim')
 call minpac#add('SirVer/ultisnips')
 call minpac#add('Shougo/deoplete.nvim')
 call minpac#add('airblade/vim-gitgutter')
 call minpac#add('gabrielelana/vim-markdown')
+call minpac#add('python-mode/python-mode')
+call minpac#add('michaeljsmith/vim-indent-object')
 
 " Define user commands for updating/cleaning the plugins.
 " Each of them loads minpac, reloads config to register the
@@ -183,6 +183,43 @@ command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 
 " TODO A hack, but necessary for later `call` commands to work on load
 packloadall
+
+
+"""""""""""""
+" Python-mode
+"""""""""""""
+
+" Unchanged defaults
+" let g:pymode = 1
+" let g:pymode_breakpoint = 1
+" let g:pymode_run = 1
+" let g:pymode_syntax = 1
+" let g:pymode_syntax_all = 1
+
+" Disable warnings
+let g:pymode_warnings = 0
+
+" Disable linting, prefer neomake
+let g:pymode_lint = 0
+
+" Disable automatic setting of options
+let g:pymode_options = 0
+
+" Auto-folds too much on buffer open unless `foldlevelstart` is high
+let g:pymode_folding = 1
+set foldlevelstart=99
+
+" Don't mess with whitespace in files automatically
+let g:pymode_trim_whitespaces = 0
+
+" Disable documentation lookup
+let g:pymode_doc = 0
+
+" Disable automatic virtualenv detection
+let g:pymode_virtualenv = 0
+
+" Disable Rope integration. I don't use it
+let g:pymode_rope = 0
 
 
 """"""""""""""
