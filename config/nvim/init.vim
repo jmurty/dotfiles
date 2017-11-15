@@ -395,10 +395,10 @@ call denite#custom#map(
       \)
 
 " Define Denite commands
-nnoremap <leader><Space> :<C-u>Denite buffer -mode=normal<cr>
+nnoremap <leader><Space> :<C-u>Denite buffer<cr>
 nnoremap <leader>t :<C-u>Denite file_rec<cr>
 nnoremap <leader>g :<C-u>Denite file_rec/git -unique<cr>
-nnoremap <leader>R :<C-u>Denite file_mru<cr>
+nnoremap <leader>r :<C-u>Denite file_mru<cr>
 nnoremap <leader>T :<C-u>Denite file<cr>
 nnoremap <leader>o :<C-u>Denite outline<cr>
 nnoremap <leader>a :<C-u>Denite grep:. -mode=normal<cr>
