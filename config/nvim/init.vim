@@ -188,6 +188,7 @@ call minpac#add('gabrielelana/vim-markdown')
 call minpac#add('python-mode/python-mode')
 call minpac#add('michaeljsmith/vim-indent-object')
 call minpac#add('justinmk/vim-sneak')
+call minpac#add('machakann/vim-highlightedyank')
 
 " Define user commands for updating/cleaning the plugins.
 " Each of them loads minpac, reloads config to register the
