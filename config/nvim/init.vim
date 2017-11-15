@@ -46,6 +46,9 @@ set gdefault
 " Clear prior search highlighting
 nnoremap <leader>/ :noh<cr>
 
+" Neovim - show live preview of :s substitutions
+set inccommand=split
+
 " Spelling - toggle 'spell' with vim-unimpaired `cos`
 
 " English US
