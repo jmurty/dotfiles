@@ -308,6 +308,14 @@ call neomake#configure#automake('w')
 nmap <Leader>y :YRShow<CR>
 
 
+"""""""""""
+" GitGutter
+"""""""""""
+
+" How many changed lines before signs are suppressed
+let g:gitgutter_max_signs = 100  " default 500
+
+
 """"""""""
 " Deoplete
 """"""""""
