@@ -184,7 +184,6 @@ call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('christoomey/vim-tmux-navigator')
 call minpac#add('SirVer/ultisnips')
 call minpac#add('Shougo/deoplete.nvim')
-call minpac#add('airblade/vim-gitgutter')
 call minpac#add('gabrielelana/vim-markdown')
 call minpac#add('python-mode/python-mode')
 call minpac#add('michaeljsmith/vim-indent-object')
@@ -306,14 +305,6 @@ call neomake#configure#automake('w')
 
 " Show contents of YankRing
 nmap <Leader>y :YRShow<CR>
-
-
-"""""""""""
-" GitGutter
-"""""""""""
-
-" How many changed lines before signs are suppressed
-let g:gitgutter_max_signs = 100  " default 500
 
 
 """"""""""
