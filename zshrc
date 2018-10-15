@@ -44,7 +44,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # Auto-export new env variables
-setopt allexport
+# Disabled for now because it segfaults the session when you paste into it
+#setopt allexport
 
 # Avoid constant command failures with error "zsh: no matches found"
 unsetopt nomatch
