@@ -162,6 +162,6 @@ PATH=$PATH:~/Library/Python/2.7/bin
 ###################
 #eval $(dinghy env)
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 alias vim='echo "Use NeoVim!"'
