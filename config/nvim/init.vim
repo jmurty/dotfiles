@@ -62,6 +62,16 @@ set guioptions=egmrLt
 " Syntax coloring
 syntax enable
 
+" Fold by indent, best for Python (and in general?)
+set foldmethod=indent
+set foldlevelstart=99
+
+" Tweaks to improve rendering speed, see
+" http://eduncan911.com/software/fix-slow-scrolling-in-vim-and-neovim.html
+set lazyredraw
+set synmaxcol=256
+syntax sync minlines=256
+
 " Show whitespace characters (toggle with `col`)
 set list
 set listchars=tab:>\ ,eol:$,nbsp:.,trail:\ ,extends:>,precedes:<
@@ -147,6 +157,9 @@ let g:python3_host_prog = '/Users/jmurty/Documents/code/virtualenvs/py3neovim/bi
 " Use smartcase settings to respect/ignore case in search
 let g:sneak#use_ic_scs = 1
 
+" Enable clever-s to repeat searches with s or S
+let g:sneak#s_next = 1
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " minpac package manager, see https://github.com/k-takata/minpac
@@ -184,11 +197,21 @@ call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('christoomey/vim-tmux-navigator')
 call minpac#add('SirVer/ultisnips')
 call minpac#add('Shougo/deoplete.nvim')
-call minpac#add('gabrielelana/vim-markdown')
+"call minpac#add('gabrielelana/vim-markdown')
 call minpac#add('python-mode/python-mode')
 call minpac#add('michaeljsmith/vim-indent-object')
 call minpac#add('justinmk/vim-sneak')
 call minpac#add('machakann/vim-highlightedyank')
+call minpac#add('machakann/vim-highlightedyank')
+" PlantUML syntax and preview
+call minpac#add('aklt/plantuml-syntax')
+call minpac#add('tyru/open-browser.vim')
+call minpac#add('weirongxu/plantuml-previewer.vim')
+" Improve folding performance
+call minpac#add('Konfekt/FastFold')
+" EditorConfig editor behaviour standardisation
+call minpac#add('editorconfig/editorconfig-vim')
+
 
 " Define user commands for updating/cleaning the plugins.
 " Each of them loads minpac, reloads config to register the
@@ -221,8 +244,7 @@ let g:pymode_lint = 0
 let g:pymode_options = 0
 
 " Auto-folds too much on buffer open unless `foldlevelstart` is high
-let g:pymode_folding = 1
-set foldlevelstart=99
+let g:pymode_folding = 0
 
 " Don't mess with whitespace in files automatically
 let g:pymode_trim_whitespaces = 0
@@ -414,5 +436,15 @@ nnoremap <leader>h :<C-u>Denite command_history<cr>
 " unite-location (Denite plugin)
 """"""""""""""""""""""""""""""""
 
-nnoremap <leader>l :<C-u>Denite location_list<cr>
-nnoremap <leader>q :<C-u>Denite quickfix<cr>
+nnoremap <leader>l :<C-u>Denite location_list -auto-highlight<cr>
+nnoremap <leader>q :<C-u>Denite quickfix -auto-highlight<cr>
+
+""""""""""""""""""
+" Taskpaper plugin
+""""""""""""""""""
+
+" Include hour and minute when marking tasks as done
+let g:task_paper_date_format = "%Y-%m-%dT%H:%M"
+
+" <Leader>th goes to "Home" view (full zoom out)
+nnoremap <buffer> <silent> <Leader>th zR<cr>
