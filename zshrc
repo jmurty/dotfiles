@@ -55,7 +55,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 # History search key bindings handled by history-substring-search plugin
 
-EDITOR=vim
+EDITOR=nvim
 
 #########
 # Aliases
