@@ -211,6 +211,7 @@ call minpac#add('weirongxu/plantuml-previewer.vim')
 call minpac#add('Konfekt/FastFold')
 " EditorConfig editor behaviour standardisation
 call minpac#add('editorconfig/editorconfig-vim')
+call minpac#add('pangloss/vim-javascript')
 
 
 " Define user commands for updating/cleaning the plugins.
