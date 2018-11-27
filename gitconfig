@@ -45,5 +45,6 @@
 	keepBackup = true
 [merge]
 	ff = false
+	log = true
 [pull]
 	ff = true
