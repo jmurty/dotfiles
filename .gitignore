@@ -10,3 +10,5 @@
 /config/configstore
 /config/git
 /config/robomongo
+/config/gcloud
+/config/lxc
