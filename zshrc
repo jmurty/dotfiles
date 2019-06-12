@@ -58,6 +58,14 @@ SAVEHIST=10000
 
 EDITOR=nvim
 
+##############
+# Key bindings
+##############
+
+# Option-left/right for backward/forward a word
+bindkey "\e\eOD" backward-word
+bindkey "\e\eOC" forward-word
+
 #########
 # Aliases
 #########
