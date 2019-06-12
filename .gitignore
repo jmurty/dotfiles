@@ -12,3 +12,4 @@
 /config/robomongo
 /config/gcloud
 /config/lxc
+/config/direnv
