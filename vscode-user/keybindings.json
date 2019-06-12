@@ -1,0 +1,123 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    // Toggle between terminal and editor focus – https://stackoverflow.com/a/43012779/4970
+    { "key": "cmd+'", "command": "workbench.action.terminal.focus"},
+    { "key": "cmd+'", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"},
+    { "key": "shift+cmd+'", "command": "workbench.action.toggleMaximizedPanel"},
+
+    {
+        "key": "shift+ctrl+h",
+        "command": "workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "shift+ctrl+l",
+        "command": "workbench.action.focusRightGroup"
+    },
+    {
+        "key": "shift+ctrl+k",
+        "command": "workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "shift+ctrl+j",
+        "command": "workbench.action.focusBelowGroup"
+    },
+    {
+        "key": "shift+cmd+]",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+[",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+k",
+        "command": "-workbench.action.terminal.clear",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+ctrl+j",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+ctrl+l",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+ctrl+k",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+ctrl+h",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+backspace",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+cmd+b e",
+        "command": "workbench.view.extension.bookmarks"
+    },
+    {
+        "key": "alt+cmd+b l",
+        "command": "bookmarks.listFromAllFiles"
+    },
+    {
+        "key": "alt+cmd+g e",
+        "command": "workbench.view.extension.gitlens"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "editor.action.smartSelect.expand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+8",
+        "command": "editor.action.nextSelectionMatchFindAction",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "workbench.action.editor.nextChange",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "workbench.action.compareEditor.nextChange",
+        "when": "textCompareEditorVisible"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "workbench.action.editor.previousChange",
+        "when": "editorTextFocus || textCompareEditorVisible"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "workbench.action.compareEditor.previousChange",
+        "when": "textCompareEditorVisible"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "git.revertSelectedRanges"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "git.stageSelectedRanges"
+    },
+    {
+        "key": "ctrl+shift+u",
+        "command": "git.unstageSelectedRanges"
+    },
+]
