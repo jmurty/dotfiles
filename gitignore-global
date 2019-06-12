@@ -16,3 +16,6 @@ tags
 # Mercurial repos
 .hg
 /.python-version
+/.mine/
+/.vscode/
+/.idea/
