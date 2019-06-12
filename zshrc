@@ -174,3 +174,8 @@ PATH=$PATH:~/Library/Python/2.7/bin
 #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 alias vim='echo "Use NeoVim!"'
+
+################
+# PostgreSQL App
+################
+PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin/
