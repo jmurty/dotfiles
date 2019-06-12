@@ -179,3 +179,8 @@ alias vim='echo "Use NeoVim!"'
 # PostgreSQL App
 ################
 PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin/
+
+########
+# direnv
+########
+eval "$(direnv hook zsh)"
