@@ -6,19 +6,19 @@
     { "key": "shift+cmd+'", "command": "workbench.action.toggleMaximizedPanel"},
 
     {
-        "key": "shift+ctrl+h",
+        "key": "cmd+k h",
         "command": "workbench.action.focusLeftGroup"
     },
     {
-        "key": "shift+ctrl+l",
+        "key": "cmd+k l",
         "command": "workbench.action.focusRightGroup"
     },
     {
-        "key": "shift+ctrl+k",
+        "key": "cmd+k k",
         "command": "workbench.action.focusAboveGroup"
     },
     {
-        "key": "shift+ctrl+j",
+        "key": "cmd+k j",
         "command": "workbench.action.focusBelowGroup"
     },
     {
@@ -37,22 +37,22 @@
         "when": "terminalFocus"
     },
     {
-        "key": "shift+ctrl+j",
+        "key": "cmd+k j",
         "command": "workbench.action.terminal.focusNext",
         "when": "terminalFocus"
     },
     {
-        "key": "shift+ctrl+l",
+        "key": "cmd+k l",
         "command": "workbench.action.terminal.focusNextPane",
         "when": "terminalFocus"
     },
     {
-        "key": "shift+ctrl+k",
+        "key": "cmd+k k",
         "command": "workbench.action.terminal.focusPrevious",
         "when": "terminalFocus"
     },
     {
-        "key": "shift+ctrl+h",
+        "key": "cmd+k h",
         "command": "workbench.action.terminal.focusPreviousPane",
         "when": "terminalFocus"
     },
@@ -101,7 +101,7 @@
     {
         "key": "ctrl+shift+up",
         "command": "workbench.action.editor.previousChange",
-        "when": "editorTextFocus || textCompareEditorVisible"
+        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+shift+up",
@@ -119,5 +119,13 @@
     {
         "key": "ctrl+shift+u",
         "command": "git.unstageSelectedRanges"
+    },
+    {
+        "key": "shift+alt+s",
+        "command": "cSpell.toggleEnableSpellChecker"
+    },
+    {
+        "key": "cmd+k f",
+        "command": "-workbench.action.closeFolder"
     },
 ]

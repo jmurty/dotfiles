@@ -1,18 +1,24 @@
-This settings directory should by symlinked on macOS as
-~/Library/Application Support/Code/User
+This settings directory actually lives on macOS at:
+
+    ~/Library/Application Support/Code/User
+
+To back up the config, periodically copy the file to ~/dotfiles/vscode-user:
+
+    cp -R ~/Library/Application\ Support/Code/User ~/dotfiles/vscode-user
 
 Installed extensions:
 
-$ code --list-extensions
+    code --list-extensions | sort | pbcopy
 
+EditorConfig.EditorConfig
+PKief.material-icon-theme
+PeterJausovec.vscode-docker
 alefragnani.Bookmarks
+angelo-breuer.clock
 dbankier.vscode-quick-select
 eamodio.gitlens
-EditorConfig.EditorConfig
 geeebe.duplicate
 ginfuru.ginfuru-better-solarized-dark-theme
 ms-python.python
 mtxr.sqltools
-PeterJausovec.vscode-docker
-PKief.material-icon-theme
-vscodevim.vim
+streetsidesoftware.code-spell-checker

@@ -14,6 +14,9 @@
     "vim.statusBarColorControl": true,
     "vim.visualstar": true,
     "vim.history": 200,
+    "vim.changeWordIncludesWhitespace": true,
+    "vim.highlightedyank.enable": true,
+    "vim.useSystemClipboard": false,
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.colorCustomizations": {
         "statusBar.background": "#005f5f",
@@ -53,9 +56,6 @@
     "window.restoreFullscreen": true,
     "workbench.activityBar.visible": true,
     "gitlens.mode.active": "zen",
-    "vim.changeWordIncludesWhitespace": true,
-    "vim.highlightedyank.enable": true,
-    "vim.useSystemClipboard": false,
     "search.location": "sidebar",
     "git.showPushSuccessNotification": true,
     "workbench.iconTheme": "material-icon-theme",
@@ -67,5 +67,15 @@
     "files.hotExit": "onExitAndWindowClose",
     "workbench.commandPalette.preserveInput": true,
     "workbench.quickOpen.preserveInput": true,
-    "window.restoreWindows": "all"
+    "window.restoreWindows": "all",
+    "cSpell.language": "en-GB",
+    "cSpell.userWords": [
+        "Murty",
+        "fallback",
+        "falsey"
+    ],
+    "editor.multiCursorModifier": "alt",
+    "debug.inlineValues": true,
+    "clock.alignment": "Right",
+    "clock.priority": 30
 }
