@@ -74,12 +74,12 @@
         "command": "workbench.view.extension.gitlens"
     },
     {
-        "key": "ctrl+up",
+        "key": "ctrl+alt+up",
         "command": "editor.action.smartSelect.expand",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+down",
+        "key": "ctrl+alt+down",
         "command": "editor.action.smartSelect.shrink",
         "when": "editorTextFocus"
     },
@@ -127,5 +127,128 @@
     {
         "key": "cmd+k f",
         "command": "-workbench.action.closeFolder"
+    },
+    {
+        "key": "shift+alt+cmd+j",
+        "command": "editsHistory.moveCursorToNextEdit"
+    },
+    {
+        "key": "cmd+k",
+        "command": "-editsHistory.moveCursorToNextEdit"
+    },
+    {
+        "key": "shift+alt+cmd+k",
+        "command": "editsHistory.moveCursorToPreviousEdit"
+    },
+    {
+        "key": "cmd+j",
+        "command": "-editsHistory.moveCursorToPreviousEdit"
+    },
+    {
+        "key": "alt+cmd+e",
+        "command": "editsHistory.createEditAtCursor"
+    },
+    {
+        "key": "cmd+u",
+        "command": "-editsHistory.createEditAtCursor"
+    },
+    {
+        "key": "shift+cmd+k",
+        "command": "-editsHistory.moveCursorToNextEditedFile"
+    },
+    {
+        "key": "shift+cmd+i",
+        "command": "-editsHistory.moveCursorToNextEditInSameFile"
+    },
+    {
+        "key": "shift+alt+cmd+e",
+        "command": "editsHistory.removeEditsFromLine"
+    },
+    {
+        "key": "cmd+i",
+        "command": "-editsHistory.removeEditsFromLine"
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "editsHistory.moveCursorToPreviouslyEditedFile"
+    },
+    {
+        "key": "shift+cmd+j",
+        "command": "-editsHistory.moveCursorToPreviouslyEditedFile"
+    },
+    {
+        "key": "alt+cmd+n",
+        "command": "editsHistory.moveCursorToNextEditedFile"
+    },
+    {
+        "key": "shift+cmd+u",
+        "command": "-editsHistory.moveCursorToPreviousEditInSameFile"
+    },
+    {
+        "key": "alt+cmd+b b",
+        "command": "bookmarks.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+k",
+        "command": "-bookmarks.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+l",
+        "command": "-bookmarks.expandSelectionToNext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+j",
+        "command": "-bookmarks.expandSelectionToPrevious",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+k",
+        "command": "-bookmarks.shrinkSelection",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+b j",
+        "command": "bookmarks.jumpToNext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+l",
+        "command": "-bookmarks.jumpToNext",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+b k",
+        "command": "bookmarks.jumpToPrevious",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+j",
+        "command": "-bookmarks.jumpToPrevious",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+d",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+cmd+k",
+        "command": "editsHistory.moveCursorToPreviousEditInSameFile"
+    },
+    {
+        "key": "alt+cmd+j",
+        "command": "editsHistory.moveCursorToNextEditInSameFile"
+    },
+    {
+        "key": "alt+cmd+b alt+cmd+b",
+        "command": "bookmarks.toggleLabeled"
     },
 ]
