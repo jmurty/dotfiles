@@ -230,16 +230,6 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+alt+d",
-        "command": "editor.action.addSelectionToNextFindMatch",
-        "when": "editorFocus"
-    },
-    {
-        "key": "cmd+d",
-        "command": "-editor.action.addSelectionToNextFindMatch",
-        "when": "editorFocus"
-    },
-    {
         "key": "alt+cmd+k",
         "command": "editsHistory.moveCursorToPreviousEditInSameFile"
     },
@@ -251,4 +241,143 @@
         "key": "alt+cmd+b alt+cmd+b",
         "command": "bookmarks.toggleLabeled"
     },
+    {
+        "key": "ctrl+shift+n",
+        "command": "-vscode-case-shifter.snakeCase",
+        "when": "editorHasSelection"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "-vscode-case-shifter.studlyCase",
+        "when": "editorHasSelection"
+    },
+    {
+        "key": "ctrl+cmd+]",
+        "command": "workbench.action.focusNextGroup"
+    },
+    {
+        "key": "ctrl+cmd+[",
+        "command": "workbench.action.focusPreviousGroup"
+    },
+    {
+        "key": "shift+cmd+b",
+        "command": "markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+shift+cmd+down",
+        "command": "search.action.focusNextSearchResult",
+        "when": "hasSearchResult"
+    },
+    {
+        "key": "f4",
+        "command": "-search.action.focusNextSearchResult",
+        "when": "hasSearchResult"
+    },
+    {
+        "key": "ctrl+shift+cmd+up",
+        "command": "search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult"
+    },
+    {
+        "key": "shift+f4",
+        "command": "-search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult"
+    },
+    {
+        "key": "ctrl+cmd+'",
+        "command": "workbench.action.toggleEditorWidths"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
+        "when": "!inEditorsPicker"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.quickOpenLeastRecentlyUsedEditor",
+        "when": "!inEditorsPicker"
+    },
+    {
+        "key": "alt+tab",
+        "command": "workbench.action.openPreviousRecentlyUsedEditor",
+        "when": "!inEditorsPicker"
+    },
+    {
+        "key": "alt+shift+tab",
+        "command": "workbench.action.openNextRecentlyUsedEditor",
+        "when": "!inEditorsPicker"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "shift+alt+cmd+c",
+        "command": "workbench.action.terminal.toggleFindCaseSensitive",
+        "when": "terminalFindWidgetFocused"
+    },
+    {
+        "key": "alt+cmd+c",
+        "command": "-workbench.action.terminal.toggleFindCaseSensitive",
+        "when": "terminalFindWidgetFocused"
+    },
+    {
+        "key": "shift+alt+cmd+c",
+        "command": "workbench.action.terminal.toggleFindCaseSensitive",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+c",
+        "command": "-workbench.action.terminal.toggleFindCaseSensitive",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+alt+cmd+c",
+        "command": "toggleFindCaseSensitive",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+cmd+c",
+        "command": "-toggleFindCaseSensitive",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+alt+cmd+c",
+        "command": "toggleSearchCaseSensitive",
+        "when": "searchViewletFocus && searchViewletVisible && !fileMatchOrFolderMatchFocus"
+    },
+    {
+        "key": "alt+cmd+c",
+        "command": "-toggleSearchCaseSensitive",
+        "when": "searchViewletFocus && searchViewletVisible && !fileMatchOrFolderMatchFocus"
+    },
+    {
+        "key": "shift+alt+cmd+c",
+        "command": "toggleSearchEditorCaseSensitive",
+        "when": "inSearchEditor && searchInputBoxFocus"
+    },
+    {
+        "key": "alt+cmd+c",
+        "command": "-toggleSearchEditorCaseSensitive",
+        "when": "inSearchEditor && searchInputBoxFocus"
+    }
+    /*
+    {
+        "key": "ctrl+shift+down",
+        "command": "merge-conflict.next",
+        "when": "conflic"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "merge-conflict.previous",
+        "when": "isInDiffEditor"
+    }
+    */
 ]

@@ -10,26 +10,28 @@ Installed extensions:
 
     code --list-extensions | sort | pbcopy
 
-AlanWalk.markdown-toc
-DavidAnson.vscode-markdownlint
 EditorConfig.EditorConfig
 GitHub.vscode-pull-request-github
+JinoAntony.vscode-case-shifter
 PKief.material-icon-theme
 VisualStudioExptTeam.vscodeintellicode
+adashen.vscode-tomcat
 alefragnani.Bookmarks
 angelo-breuer.clock
 bierner.github-markdown-preview
-bierner.markdown-checkbox
-bierner.markdown-emoji
-bierner.markdown-preview-github-styles
-bierner.markdown-yaml-preamble
+brunnerh.insert-unicode
 bungcip.better-toml
+christian-kohler.npm-intellisense
+dbaeumer.vscode-eslint
 dbankier.vscode-quick-select
 eamodio.gitlens
-geeebe.duplicate
 ginfuru.ginfuru-better-solarized-dark-theme
+iocave.customize-ui
+iocave.monkey-patch
 johnpapa.vscode-peacock
 karigari.chat
+lextudio.restructuredtext
+mhutchie.git-graph
 mishkinf.goto-next-previous-member
 mishkinf.vscode-edits-history
 ms-azuretools.vscode-docker
@@ -44,5 +46,15 @@ ms-vsliveshare.vsliveshare
 ms-vsliveshare.vsliveshare-audio
 ms-vsliveshare.vsliveshare-pack
 mtxr.sqltools
+redhat.java
+redhat.vscode-xml
+stkb.rewrap
 streetsidesoftware.code-spell-checker
 sysoev.vscode-open-in-github
+tehnix.vscode-tidymarkdown
+vscjava.vscode-java-debug
+vscjava.vscode-java-dependency
+vscjava.vscode-java-pack
+vscjava.vscode-java-test
+vscjava.vscode-maven
+yzhang.markdown-all-in-one
