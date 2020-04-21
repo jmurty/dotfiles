@@ -36,6 +36,8 @@
   current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
   # Usage: git track origin/feature-123-login-form
   track = checkout -t
+  # From https://thoughtbot.com/blog/dumpster-diving-through-dotfiles-git-branches
+  branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)%09%(color:red)%(authorname)%09%(color:white)%(color:bold)%(refname:short)\" refs/remotes
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
