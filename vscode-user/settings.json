@@ -1,9 +1,13 @@
 {
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
+    "python.languageServer": "Pylance",
     "python.linting.enabled": true,
+    "python.linting.pylamaEnabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.pylintEnabled": false,
+    "python.workspaceSymbols.exclusionPatterns": [],
+    "python.analysis.memory.keepLibraryAst": true,
+    "python.analysis.memory.keepLibraryLocalVariables": true,
     "editor.renderControlCharacters": true,
-    "editor.renderWhitespace": "boundary",
     "window.zoomLevel": 0,
     "editor.fontFamily": "'Source Code Pro',Menlo,'Fira Code',Monaco,'Courier New', monospace",
     "editor.fontSize": 12,
@@ -19,26 +23,19 @@
     },
     "editor.rulers": [80,100],
     "editor.minimap.enabled": false,
-    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.renderSideBySide": true,
     "diffEditor.originalEditable": true,
     "files.insertFinalNewline": true,
-    "python.venvFolders": [
-        "env",
-        "venv",
-        ".env",
-        ".venv",
-        ".pyenv",
-        "./var/go.sh-venv",
-    ],
+    "git.path": "/usr/local/bin/git",
     "git.autofetch": true,
+    "git.promptToSaveFilesBeforeCommit": "always",
+    "git.showPushSuccessNotification": true,
     "gitlens.keymap": "chorded",
-    "git.promptToSaveFilesBeforeCommit": true,
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
     "html.format.wrapLineLength": 0,
-    "python.jediEnabled": false,
     "editor.suggest.localityBonus": true,
     "editor.acceptSuggestionOnEnter": "smart",
     "editor.suggest.shareSuggestSelections": true,
@@ -46,7 +43,6 @@
     "window.nativeFullScreen": false,
     "window.restoreFullscreen": true,
     "workbench.activityBar.visible": true,
-    "git.showPushSuccessNotification": true,
     "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.saturation": 1,
     "material-icon-theme.opacity": 0.7,
@@ -192,18 +188,13 @@
     "quick-select.includeBackticks": false,
     "bookmarks.navigateThroughAllFiles": true,
     "bookmarks.saveBookmarksInProject": true,
-    "sqltools.results": {
-        "location": "active"
-    },
-    "python.workspaceSymbols.exclusionPatterns": [],
+    "bookmarks.label.suggestion": "suggestWhenSelected",
+    "bookmarks.sideBar.expanded": true,
     "liveshare.languages.allowGuestCommandControl": true,
     "liveshare.showInStatusBar": "whileCollaborating",
     "editor.minimap.showSlider": "always",
     "editor.minimap.maxColumn": 80,
     "clock.format": "yyyy-mm-dd h:MMtt",
-    "python.autoComplete.extraPaths": [
-        "./src"
-    ],
     "[markdown]": {
         "editor.defaultFormatter": "tehnix.vscode-tidymarkdown"
     },
@@ -220,11 +211,26 @@
     "gitlens.views.compare.location": "gitlens",
     "gitlens.views.search.location": "gitlens",
     "customizeUI.stylesheet": {
-        // Hid excessive "editor action" buttons in editor tab bar
+        // Hide excessive "editor action" buttons in editor tab bar
         ".editor-actions": "display: none !important;",
     },
     "rewrap.wrappingColumn": 79,
-    "workbench.colorTheme": "Solarized Dark",
+    // Style markdown code blocks to look like inline `code` sections
+    // See https://stackoverflow.com/a/53788208/4970
+    "editor.tokenColorCustomizations": {
+        "[Solarized Dark]": {
+            "textMateRules": [
+                {
+                    "scope": "markup.raw.block.markdown,markup.fenced_code.block.markdown",
+                    "settings": {
+                        "foreground": "#2AA198",
+                        "fontStyle": ""
+                        // "background": "#000"  // background isn't supported
+                    }
+                }
+            ]
+        }
+    },
     "editor.minimap.scale": 2,
     "gitlens.views.repositories.branches.layout": "list",
     "git-graph.dateFormat": "Relative",
@@ -235,12 +241,51 @@
     "gitlens.heatmap.ageThreshold": "21",
     "terminal.integrated.minimumContrastRatio": 4.5,
     "vsintellicode.features.python.deepLearning": "enabled",
-    "search.smartCase": true,
     "search.enableSearchEditorPreview": true,
     "editor.smoothScrolling": true,
     "markdown.extension.toc.levels": "2..6",
-    "python.analysis.memory.keepLibraryAst": true,
-    "python.analysis.memory.keepLibraryLocalVariables": true,
     "markdown.preview.fontSize": 12,
-    "markdown.preview.lineHeight": 1
+    "markdown.preview.lineHeight": 1,
+    "editor.renderWhitespace": "boundary",
+    "files.trimTrailingWhitespace": true,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "githubIssues.ignoreCompletionTrigger": [
+        "python",
+        "http"
+    ],
+    "rest-client.previewResponsePanelTakeFocus": false,
+    "rest-client.previewOption": "exchange",
+    "rest-client.timeoutinmilliseconds": 10000,
+    "rest-client.fontFamily": "'Source Code Pro',Menlo,'Fira Code',Monaco,'Courier New', monospace",
+    "rest-client.fontSize": 12,
+    "git-graph.dialog.addTag.pushToRemote": true,
+    "sqltools.autoOpenSessionFiles": false,
+    "sqltools.useNodeRuntime": true,
+    "sqltools.results": {
+        "location": "next"
+    },
+    "explorer.autoReveal": "focusNoScroll",
+    "gitProjectManager.baseProjectsFolders": [
+        "/Users/jmurty/Documents/code"
+    ],
+    "gitProjectManager.maxDepthRecursion": 3,
+    "gitProjectManager.storeRepositoriesBetweenSessions": true,
+    "gitProjectManager.ignoredFolders": [
+        "node_modules"
+    ],
+    "cSpell.enabled": false,
+    "window.titleBarStyle": "native",
+    "workbench.colorTheme": "Solarized Dark",
+    "errorLens.gutterIconsEnabled": true,
+    "errorLens.gutterIconSet": "circle",
+    "errorLens.followCursor": "closestProblem",
+    "sqltools.sortColumns": "ordinalnumber",
+    "sqltools.tableTreeItemsExpanded": true,
+    "explorer.confirmDragAndDrop": false,
+    "java.semanticHighlighting.enabled": true,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.limit.enabled": true,
+    "editor.renderLineHighlightOnlyWhenFocus": true
 }

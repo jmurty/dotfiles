@@ -169,16 +169,8 @@
         "command": "-editsHistory.removeEditsFromLine"
     },
     {
-        "key": "alt+cmd+p",
-        "command": "editsHistory.moveCursorToPreviouslyEditedFile"
-    },
-    {
         "key": "shift+cmd+j",
         "command": "-editsHistory.moveCursorToPreviouslyEditedFile"
-    },
-    {
-        "key": "alt+cmd+n",
-        "command": "editsHistory.moveCursorToNextEditedFile"
     },
     {
         "key": "shift+cmd+u",
@@ -238,7 +230,7 @@
         "command": "editsHistory.moveCursorToNextEditInSameFile"
     },
     {
-        "key": "alt+cmd+b alt+cmd+b",
+        "key": "alt+cmd+b shift+b",
         "command": "bookmarks.toggleLabeled"
     },
     {
@@ -367,17 +359,66 @@
         "key": "alt+cmd+c",
         "command": "-toggleSearchEditorCaseSensitive",
         "when": "inSearchEditor && searchInputBoxFocus"
-    }
-    /*
-    {
-        "key": "ctrl+shift+down",
-        "command": "merge-conflict.next",
-        "when": "conflic"
     },
     {
-        "key": "ctrl+shift+up",
+        "key": "ctrl+cmd+up",
+        "command": "workbench.action.moveEditorToAboveGroup",
+        "when": "-terminalFocus"
+    },
+    {
+        "key": "ctrl+cmd+down",
+        "command": "workbench.action.moveEditorToBelowGroup",
+        "when": "-terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+down",
+        "command": "merge-conflict.next",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+up",
         "command": "merge-conflict.previous",
-        "when": "isInDiffEditor"
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+u",
+        "command": "-workbench.action.output.toggleOutput"
+    },
+    {
+        "key": "shift+cmd+u",
+        "command": "cursorRedo"
+    },
+    {
+        "key": "alt+cmd+b alt+cmd+b",
+        "command": "bookmarksExplorer.focus"
+    },
+    {
+        "key": "ctrl+shift+pagedown",
+        "command": "editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+f8",
+        "command": "-editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+pageup",
+        "command": "editor.action.marker.prev",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+alt+f8",
+        "command": "-editor.action.marker.prev",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+e cmd+e",
+        "command": "-sqltools.executeQuery",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+e cmd+e",
+        "command": "sqltools.executeCurrentQuery"
     }
-    */
 ]

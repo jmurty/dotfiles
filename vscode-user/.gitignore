@@ -1,2 +1,5 @@
 /globalStorage/
 /workspaceStorage/
+
+# Cached data from Git Projects plugin
+/gpm*
